@@ -1,0 +1,15 @@
+ion-item.item.item-input {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+ion-list[inset] .item:last-child {
+    border-bottom-width: 1px;
+}
+
+ion-icon.ion-md-person.item-icon {
+    margin-top: auto;
+}
+
+ion-label[floating] {
+    margin: 0px;
+}

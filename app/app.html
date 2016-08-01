@@ -1,0 +1,49 @@
+<ion-nav [root]="rootPage" #content></ion-nav>
+<ion-menu [content]="content">
+    <ion-content>
+        <ion-list>
+            <ion-item class="user">
+                <ion-avatar item-left>
+                    <img src="../img/user.png">
+                </ion-avatar>
+                <h2>Admin</h2>
+                <p>admin@gmail.com</p>
+                <button small dark clear (click)="openPage(login)" menuClose item-right>
+                    <ion-icon name="md-brush"></ion-icon>
+                </button>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <button ion-item (click)="openPage(home)" menuClose>
+                <ion-icon name="ios-home-outline" item-left></ion-icon>
+                Home
+            </button>
+            <button ion-item (click)="openPage(favoritos)" menuClose>
+                <ion-icon name="md-heart-outline" item-left></ion-icon>
+                Favoritos
+            </button>
+            <button ion-item (click)="openPage(compras)" menuClose>
+                <ion-icon name="logo-usd" item-left></ion-icon>
+                Compras
+            </button>
+            <button ion-item (click)="openPage(historico)" menuClose>
+                <ion-icon name="ios-cart-outline" item-left></ion-icon>
+                Histórico
+            </button>
+            <button ion-item (click)="openPage(configuracoes)" menuClose>
+                <ion-icon name="ios-settings" item-left></ion-icon>
+                Configurações
+            </button>
+        </ion-list>
+        <ion-list class="list-bottom">
+            <button ion-item (click)="openPage(home)" menuClose>
+                <ion-icon name="ios-log-out" item-left></ion-icon>
+                Sair
+            </button>
+            <button ion-item (click)="openPage(home)" menuClose>
+                <ion-icon name="md-people" item-left></ion-icon>
+                Sobre nós
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
