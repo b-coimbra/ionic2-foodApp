@@ -1,9 +1,42 @@
-ion-item.item.item-input {
-    border-bottom: 1px solid #f2f2f2;
+.login {
+    background: url('../../img/login-bg.jpg') center no-repeat;
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0,0,0, 0.6);
+    }
+
+    .item {
+        background: transparent;
+        color: #FFF;
+    }
+
+    ion-item {
+        border-bottom: 1px solid #FFF;
+    }
+    ion-list[inset] .item:last-child {
+        border-bottom-width: 1px;
+        border-radius: 0;
+    }
+
+    .toolbar[danger] .toolbar-background {
+        background: transparent;
+    }
+
+    .social-buttons {
+        margin-top: 50px;
+    }
 }
 
-ion-list[inset] .item:last-child {
-    border-bottom-width: 1px;
+ion-icon[item-left] + .item-inner, ion-icon[item-left] + .item-input {
+    margin-left: 5px;
+}
+
+.login ion-list > .item ion-label {
+    color: #FFF;
 }
 
 ion-icon.ion-md-person.item-icon {

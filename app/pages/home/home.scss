@@ -2,6 +2,64 @@
 
 }
 
+.toolbar {
+    padding: 0;
+}
+
+.pedidos {
+    height: 100%;
+}
+
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: -moz-linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* ff3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,1))); /* safari4+,chrome */
+        background: -webkit-linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* safari5.1+,chrome10+ */
+        width: 100%;
+        bottom: 0;
+        height: 100%;
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+        margin: -5px;
+    }
+  }
+
+  button, .card-title, .card-subtitle {
+    z-index: 99;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
+}
+
 .alert-title {
     font-family: 'Roboto Medium';
     font-size: 1.5rem;

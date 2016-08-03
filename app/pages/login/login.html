@@ -9,24 +9,75 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="login">
+
+<ion-toolbar [attr.primary]="isAndroid ? '' : null" no-border-top danger>
+<ion-segment [(ngModel)]="home" light>
+  <ion-segment-button value="home">
+    Entrar
+  </ion-segment-button>
+  <ion-segment-button value="pedidos">
+    Cadastrar
+  </ion-segment-button>
+</ion-segment>
+</ion-toolbar>
+
+<div [ngSwitch]="home">
+    <ion-list *ngSwitchWhen="'home'" class="home">
 <ion-list inset>
     <ion-item>
         <ion-icon name="md-person" item-left></ion-icon>
-        <ion-label floating>Usuário</ion-label>
+        <ion-label floating class="login-label">Usuário</ion-label>
         <ion-input type="text" value=""></ion-input>
     </ion-item>
-
     <ion-item>
         <ion-icon name="md-lock" item-left></ion-icon>
-        <ion-label floating>Senha</ion-label>
+        <ion-label floating class="login-label">Senha</ion-label>
         <ion-input type="password" value=""></ion-input>
     </ion-item>
 
-</ion-list>
+    <div padding>
+        <button light outline block>Entrar</button>
+    </div>
 
-<div padding>
-    <button danger block>Entrar</button>
-    <button danger outline block>Cadastrar</button>
+    <div class="social-buttons">
+    <button full>
+        Facebook
+        <ion-icon name="logo-facebook"></ion-icon>
+    </button>
+    <button full secondary>
+        Twitter
+        <ion-icon name="logo-twitter"></ion-icon>
+    </button>
+    <button full danger>
+        google
+        <ion-icon name="logo-google"></ion-icon>
+    </button>
+</div>
+</ion-list>
+</ion-list>
+ <ion-list *ngSwitchWhen="'pedidos'" class="pedidos">
+     <ion-list inset>
+     <ion-item>
+         <ion-icon name="md-person" item-left></ion-icon>
+         <ion-label floating class="login-label">Nome</ion-label>
+         <ion-input type="text" value=""></ion-input>
+     </ion-item>
+     <ion-item>
+         <ion-icon name="ios-mail-outline" item-left></ion-icon>
+         <ion-label floating class="login-label">E-mail</ion-label>
+         <ion-input type="password" value=""></ion-input>
+     </ion-item>
+     <ion-item>
+         <ion-icon name="ios-lock-outline" item-left></ion-icon>
+         <ion-label floating class="login-label">Senha</ion-label>
+         <ion-input type="password" value=""></ion-input>
+     </ion-item>
+
+     <div padding>
+         <button light outline block>Registrar</button>
+     </div>
+ </ion-list>
+</ion-list>
 </div>
 </ion-content>

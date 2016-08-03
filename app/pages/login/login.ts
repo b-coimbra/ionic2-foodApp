@@ -7,6 +7,7 @@ import {HomePage} from '../home/home';
 })
 
 export class LoginPage {
+        home: string = "home";
     constructor() {
 
     }
