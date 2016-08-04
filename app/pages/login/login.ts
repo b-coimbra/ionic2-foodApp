@@ -1,4 +1,5 @@
-import {Page} from 'ionic-angular';
+import {Page, Loading} from 'ionic-angular';
+import {NavController} from 'ionic-angular';
 import {Component} from '@angular/core';
 import {HomePage} from '../home/home';
 
@@ -7,8 +8,15 @@ import {HomePage} from '../home/home';
 })
 
 export class LoginPage {
-        home: string = "home";
-    constructor() {
+    home: string = "home";
+    constructor(public nav: NavController) { }
 
+    loginEnter() {
+        let loading = Loading.create({
+            content: "Espere um momento...",
+            duration: 3000,
+            dismissOnPageChange: true
+        });
+        this.nav.present(loading);
     }
 }

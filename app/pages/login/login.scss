@@ -46,3 +46,22 @@ ion-icon.ion-md-person.item-icon {
 ion-label[floating] {
     margin: 0px;
 }
+
+.btn-title {
+    text-transform: none;
+}
+
+ion-list {
+    .facebook {
+        background-color: #387ef5;
+    }
+
+    .twitter {
+        background-color: #53aac6;
+    }
+
+    .google {
+        background-color: #ef473a;
+    }
+
+}

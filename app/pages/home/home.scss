@@ -2,8 +2,35 @@
 
 }
 
+.price {
+    color: #FF0000;
+    font-weight: bold;
+    float: right;
+}
+
+.toolbar-background {
+    background-color: #f53d3d;
+}
+
+.bar-button-default {
+    color: #FFF;
+}
+
+.toolbar-title {
+    color: #FFF;
+}
+
+ion-card {
+    border-radius: 0;
+}
+
 .toolbar {
     padding: 0;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0, 0.3);
+}
+
+ion-segment {
+    padding-top: 12px;
 }
 
 .pedidos {

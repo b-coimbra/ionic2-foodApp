@@ -4,24 +4,24 @@
             <ion-icon name="md-menu"></ion-icon>
         </button>
         <ion-buttons start right>
-        <button royal>
-            <ion-icon name="search"></ion-icon>
-        </button>
-        <button (click)="presentPopover($event)">
-            <ion-icon name="more"></ion-icon>
-        </button>
+            <button royal>
+                <ion-icon name="search"></ion-icon>
+            </button>
+            <button (click)="presentPopover($event)">
+                <ion-icon name="more"></ion-icon>
+            </button>
         </ion-buttons>
     </ion-navbar>
 
-    <ion-toolbar [attr.primary]="isAndroid ? '' : null" no-border-top danger>
-    <ion-segment [(ngModel)]="home" light>
-      <ion-segment-button value="home">
-        Home
-      </ion-segment-button>
-      <ion-segment-button value="pedidos">
-        Pedidos
-      </ion-segment-button>
-    </ion-segment>
+    <ion-toolbar no-border-top danger>
+        <ion-segment [(ngModel)]="home" light>
+            <ion-segment-button value="home">
+                Home
+            </ion-segment-button>
+            <ion-segment-button value="pedidos">
+                Pedidos
+            </ion-segment-button>
+        </ion-segment>
     </ion-toolbar>
 </ion-header>
 
@@ -29,16 +29,16 @@
     <div [ngSwitch]="home">
         <ion-list *ngSwitchWhen="'home'" class="home">
 
-              <ion-card>
+            <ion-card>
                 <img src="../img/burger.png"/>
                 <div class="card-title">Hamburger</div>
                 <div class="card-subtitle">19 Disponíveis</div>
                 <button fab danger fab-bottom fab-right (click)="openModal({charNum: 0})">
                     <ion-icon name="ios-cart"></ion-icon>
                 </button>
-              </ion-card>
+            </ion-card>
 
-              <ion-card>
+            <ion-card>
                 <img src="../img/pizza.png"/>
                 <div class="card-title">Pizza</div>
                 <div class="card-subtitle">10 Disponíveis</div>
@@ -46,61 +46,94 @@
                     <ion-icon name="ios-cart"></ion-icon>
                 </button>
                 <ionic-ratings ratingsobj='ratingsObject'></ionic-ratings>
-              </ion-card>
+            </ion-card>
 
-              <ion-card>
+            <ion-card>
                 <img src="img/salad.png"/>
                 <div class="card-title">Salada</div>
                 <div class="card-subtitle">4 Disponíveis</div>
                 <button fab danger fab-bottom fab-right>
                     <ion-icon name="ios-cart"></ion-icon>
                 </button>
-              </ion-card>
+            </ion-card>
         </ion-list>
-      <ion-list *ngSwitchWhen="'pedidos'" class="pedidos">
-          <ion-item-sliding>
-            <ion-item>
-              Hamburger
-              <ion-icon name="ios-arrow-back" item-right></ion-icon>
-            </ion-item>
-            <ion-item-options side="right" (ionSwipe)="saveItem(item)">
-              <button expandable (click)="doBuy()" dark>
-                <ion-icon name="md-cart"></ion-icon>
-              </button>
-              <button expandable (click)="saveItem(item)" dark>
-                <ion-icon name="md-close"></ion-icon>
-              </button>
-            </ion-item-options>
-          </ion-item-sliding>
-          <ion-item-sliding>
-            <ion-item>
-              Pizza
-              <ion-icon name="ios-arrow-back" item-right></ion-icon>
-            </ion-item>
-            <ion-item-options side="right" (ionSwipe)="saveItem(item)">
-              <button expandable (click)="doBuy()" dark>
-                <ion-icon name="md-cart"></ion-icon>
-              </button>
-              <button expandable (click)="saveItem(item)" dark>
-                <ion-icon name="md-close"></ion-icon>
-              </button>
-            </ion-item-options>
-          </ion-item-sliding>
-          <ion-item-sliding>
-            <ion-item>
-              Salada
-              <ion-icon name="ios-arrow-back" item-right></ion-icon>
-            </ion-item>
-            <ion-item-options side="right" (ionSwipe)="saveItem(item)">
-              <button expandable (click)="doBuy()" dark>
-                <ion-icon name="md-cart"></ion-icon>
-              </button>
-              <button expandable (click)="saveItem(item)" dark>
-                <ion-icon name="md-close"></ion-icon>
-              </button>
-            </ion-item-options>
-          </ion-item-sliding>
-      </ion-list>
+        <ion-list *ngSwitchWhen="'pedidos'" class="pedidos">
+            <ion-item-sliding>
+                <ion-item>
+                    <span item-right class="price">19:20</span>
+                    Hamburger
+                    <ion-icon name="ios-arrow-back" item-right></ion-icon>
+                </ion-item>
+                <ion-item-options side="right" (ionSwipe)="saveItem(item)">
+                    <button expandable (click)="doBuy()" dark>
+                        <ion-icon name="md-cart"></ion-icon>
+                    </button>
+                    <button expandable (click)="saveItem(item)" dark>
+                        <ion-icon name="md-close"></ion-icon>
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+            <ion-item-sliding>
+                <ion-item>
+                    <span item-right class="price">17:45</span>
+                    Pizza
+                    <ion-icon name="ios-arrow-back" item-right></ion-icon>
+                </ion-item>
+                <ion-item-options side="right" (ionSwipe)="saveItem(item)">
+                    <button expandable (click)="doBuy()" dark>
+                        <ion-icon name="md-cart"></ion-icon>
+                    </button>
+                    <button expandable (click)="saveItem(item)" dark>
+                        <ion-icon name="md-close"></ion-icon>
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+            <ion-item-sliding>
+                <ion-item>
+                    <span item-right class="price">14:33</span>
+                    Salada
+                    <ion-icon name="ios-arrow-back" item-right></ion-icon>
+                </ion-item>
+                <ion-item-options side="right" (ionSwipe)="saveItem(item)">
+                    <button expandable (click)="doBuy()" dark>
+                        <ion-icon name="md-cart"></ion-icon>
+                    </button>
+                    <button expandable (click)="saveItem(item)" dark>
+                        <ion-icon name="md-close"></ion-icon>
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+            <ion-item-sliding>
+                <ion-item>
+                    <span item-right class="price">15:21</span>
+                        Chorume
+                    <ion-icon name="ios-arrow-back" item-right></ion-icon>
+                </ion-item>
+                <ion-item-options side="right" (ionSwipe)="saveItem(item)">
+                    <button expandable (click)="doBuy()" dark>
+                        <ion-icon name="md-cart"></ion-icon>
+                    </button>
+                    <button expandable (click)="saveItem(item)" dark>
+                        <ion-icon name="md-close"></ion-icon>
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+            <ion-item-sliding>
+                <ion-item>
+                    <span item-right class="price">18:11</span>
+                        Jooj
+                    <ion-icon name="ios-arrow-back" item-right></ion-icon>
+                </ion-item>
+                <ion-item-options side="right" (ionSwipe)="saveItem(item)">
+                    <button expandable (click)="doBuy()" dark>
+                        <ion-icon name="md-cart"></ion-icon>
+                    </button>
+                    <button expandable (click)="saveItem(item)" dark>
+                        <ion-icon name="md-close"></ion-icon>
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
     </div>
 
 </ion-content>

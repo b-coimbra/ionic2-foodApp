@@ -10,34 +10,45 @@
 </ion-header>
 
 <ion-content>
-    <ion-item>
-        <ion-label></ion-label>
-        <ion-toggle danger checked="true"></ion-toggle>
-    </ion-item>
-    <ion-item>
-        <ion-label></ion-label>
-        <ion-toggle danger checked="true"></ion-toggle>
-    </ion-item>
-    <ion-item>
-        <ion-label></ion-label>
-        <ion-toggle danger checked="true"></ion-toggle>
-    </ion-item>
-    <ion-item>
-        <ion-label></ion-label>
-        <ion-toggle danger checked="true"></ion-toggle>
-    </ion-item>
-    <ion-item>
-        <ion-label></ion-label>
-        <ion-toggle danger checked="true"></ion-toggle>
-    </ion-item>
-    <ion-item>
-        <ion-label></ion-label>
-        <ion-toggle danger checked="true"></ion-toggle>
-    </ion-item>
+    <ion-list padding>
+        <ion-item>
+            <ion-label>lorem ipsum</ion-label>
+            <ion-toggle danger checked="true"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>lorem ipsum</ion-label>
+            <ion-toggle danger checked="true"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>lorem ipsum</ion-label>
+            <ion-toggle danger checked="true"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>lorem ipsum</ion-label>
+            <ion-toggle danger checked="true"></ion-toggle>
+        </ion-item>
+    </ion-list>
+    <ion-list no-border padding-top>
+        <ion-item>
+            <ion-icon name='md-navigate' item-left></ion-icon>
+            Cidade
+            <ion-note item-right>
+                Matão - SP
+            </ion-note>
+        </ion-item>
+
+        <ion-item>
+            <ion-toggle danger checked="false"></ion-toggle>
+            <ion-label>
+                Delivery
+            </ion-label>
+            <ion-icon name='md-bicycle' item-left></ion-icon>
+        </ion-item>
+    </ion-list>
     <div padding>
         <center>
-            <button dark outline full>Excluir Conta</button>
-            <button danger full>Salvar</button>
+            <button danger full (click)="SaveChanges()">Salvar</button>
+            <button clear dark full class="remove-account">Excluir Conta</button>
         </center>
     </div>
 </ion-content>

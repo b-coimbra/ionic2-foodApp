@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar danger>
         <ion-title>
-            Entrar
+            Login
         </ion-title>
         <button menuToggle>
             <ion-icon name="md-menu"></ion-icon>
@@ -37,21 +37,21 @@
     </ion-item>
 
     <div padding>
-        <button light outline block>Entrar</button>
+        <button light outline block (click)="loginEnter()">Entrar</button>
     </div>
 
     <div class="social-buttons">
-    <button full>
-        Facebook
-        <ion-icon name="logo-facebook"></ion-icon>
+    <button full class="facebook">
+        <ion-icon name="logo-facebook" item-left></ion-icon>
+        <span item-right class="btn-title">Entrar com Facebook</span>
     </button>
-    <button full secondary>
-        Twitter
-        <ion-icon name="logo-twitter"></ion-icon>
+    <button full class="twitter">
+        <ion-icon name="logo-twitter" item-left></ion-icon>
+        <span item-right class="btn-title">Entrar com Twitter</span>
     </button>
-    <button full danger>
-        google
-        <ion-icon name="logo-google"></ion-icon>
+    <button full class="google">
+        <ion-icon name="logo-google" item-left></ion-icon>
+        <span item-right class="btn-title">Entrar com Google</span>
     </button>
 </div>
 </ion-list>
@@ -66,7 +66,7 @@
      <ion-item>
          <ion-icon name="ios-mail-outline" item-left></ion-icon>
          <ion-label floating class="login-label">E-mail</ion-label>
-         <ion-input type="password" value=""></ion-input>
+         <ion-input type="text" value=""></ion-input>
      </ion-item>
      <ion-item>
          <ion-icon name="ios-lock-outline" item-left></ion-icon>
@@ -75,7 +75,7 @@
      </ion-item>
 
      <div padding>
-         <button light outline block>Registrar</button>
+         <button light outline block (click)="loginEnter()">Registrar</button>
      </div>
  </ion-list>
 </ion-list>

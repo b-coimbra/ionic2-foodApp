@@ -9,6 +9,7 @@ import {ComprasPage} from './pages/compras/compras';
 import {HistoricoPage} from './pages/historico/historico';
 import {ConfiguracoesPage} from './pages/configuracoes/configuracoes';
 import {LoginPage} from './pages/login/login';
+import {SobrePage} from './pages/sobre/sobre';
 
 @Component({
     templateUrl: 'build/app.html'
@@ -22,6 +23,7 @@ export class MyApp {
     historico = HistoricoPage;
     configuracoes = ConfiguracoesPage;
     login = LoginPage;
+    sobre = SobrePage;
 
     rootPage: any = this.home;
 
