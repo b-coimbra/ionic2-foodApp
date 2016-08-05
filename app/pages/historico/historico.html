@@ -6,40 +6,46 @@
         <button menuToggle>
             <ion-icon name="md-menu"></ion-icon>
         </button>
+        <ion-buttons start right>
+            <button royal>
+                <ion-icon name="md-trash"></ion-icon>
+            </button>
+        </ion-buttons>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
     <ion-card>
-        <ion-list>
-            <button ion-item (click)="openMenu()">
-                <span item-left>Hamburger</span>
-                <ion-icon name="ios-more" item-right></ion-icon>
+        <ion-item>
+            <span item-left>Hamburger</span>
+            <ion-note item-right>
+                33min
+            </ion-note>
+            <button dark clear item-right>
+                <ion-icon name="ios-more"></ion-icon>
             </button>
-        </ion-list>
-        <ion-list>
-            <button ion-item (click)="openMenu()">
-                <span item-left>Pizza</span>
-                <ion-icon name="ios-more" item-right></ion-icon>
-            </button>
-        </ion-list>
-        <ion-list>
-            <button ion-item (click)="openMenu()">
-                <span item-left>Salada</span>
-                <ion-icon name="ios-more" item-right></ion-icon>
-            </button>
-        </ion-list>
-        <ion-list>
-            <button ion-item (click)="openMenu()">
-                <span item-left>Chorume</span>
-                <ion-icon name="ios-more" item-right></ion-icon>
-            </button>
-        </ion-list>
-        <ion-list>
-            <button ion-item (click)="openMenu()">
-                <span item-left>Jooj</span>
-                <ion-icon name="ios-more" item-right></ion-icon>
-            </button>
-        </ion-list>
+        </ion-item>
     </ion-card>
-    </ion-content>
+    <ion-card>
+        <ion-item>
+            <span item-left>Pizza</span>
+            <ion-note item-right>
+                11hr
+            </ion-note>
+            <button dark clear item-right>
+                <ion-icon name="ios-more"></ion-icon>
+            </button>
+        </ion-item>
+    </ion-card>
+    <ion-card>
+        <ion-item>
+            <span item-left>Salada</span>
+            <ion-note item-right>
+                11/06/16
+            </ion-note>
+            <button dark clear item-right>
+                <ion-icon name="ios-more"></ion-icon>
+            </button>
+        </ion-item>
+    </ion-card>
+</ion-content>

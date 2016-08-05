@@ -14,6 +14,7 @@
 
 <ion-content>
     <ion-list>
+        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
         <ion-item>
             <ion-label>Estabelecimento</ion-label>
             <ion-select [(ngModel)]="os" submitText="Ok" cancelText="Fechar">
@@ -30,7 +31,7 @@
         </ion-item>
         <ion-list>
             <ion-item>
-                <span item-left>Hamburger</span>
+                <span item-left>Hamburgers</span>
                 <span item-right class="price">$6</span>
                 <button danger clear item-right>
                     Comprar

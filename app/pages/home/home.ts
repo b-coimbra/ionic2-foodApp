@@ -51,7 +51,7 @@ class ModalsContentPage {
         public params: NavParams,
         public viewCtrl: ViewController
     ) {
-        
+
     }
 
     dismiss() {

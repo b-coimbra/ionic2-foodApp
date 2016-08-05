@@ -5,7 +5,7 @@
         </button>
         <ion-buttons start right>
             <button royal>
-                <ion-icon name="search"></ion-icon>
+                <ion-icon name="md-funnel"></ion-icon>
             </button>
             <button (click)="presentPopover($event)">
                 <ion-icon name="more"></ion-icon>
@@ -30,7 +30,7 @@
         <ion-list *ngSwitchWhen="'home'" class="home">
 
             <ion-card>
-                <img src="../img/burger.png"/>
+                <img src="img/burger.png"/>
                 <div class="card-title">Hamburger</div>
                 <div class="card-subtitle">19 Disponíveis</div>
                 <button fab danger fab-bottom fab-right (click)="openModal({charNum: 0})">
@@ -39,7 +39,7 @@
             </ion-card>
 
             <ion-card>
-                <img src="../img/pizza.png"/>
+                <img src="img/pizza.png"/>
                 <div class="card-title">Pizza</div>
                 <div class="card-subtitle">10 Disponíveis</div>
                 <button fab danger fab-bottom fab-right>
