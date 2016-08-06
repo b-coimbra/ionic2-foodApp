@@ -2,7 +2,7 @@
 
 Academic project in progress.
 
-Do the following command to download all the dependencies in the root page before running the server, otherwise it won't work:
+Do the following command to install all the dependencies in the root page before running the server, otherwise it won't work:
 ```
 npm install
 ```
