@@ -2,6 +2,11 @@
 
 Academic project in progress.
 
+Do the following command to download all the dependencies in the root page before running the server, otherwise it won't work:
+```
+npm install
+```
+
 ####PREVIEWS
 
 ![alt tag](http://i.imgur.com/9EDEQOL.png)![alt tag](http://i.imgur.com/EpMfLdA.png)
