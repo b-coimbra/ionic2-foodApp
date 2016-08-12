@@ -2,10 +2,15 @@
 
 Academic project in progress.
 
-Do the following command to install all the dependencies in the root page before running the server, otherwise it won't work:
-```
-npm install
-```
+
+## Installation
+1. Clone this repo, or download it into a directory of your choice.
+2. Inside the directory, run ```npm install```.
+
+## Requirements
+To use this app, you'll need the following things installed on your machine: 
+1. [Ionic](http://ionicframework.com/)
+2. [Nodejs](http://nodejs.org)
 
 ####PREVIEWS
 
