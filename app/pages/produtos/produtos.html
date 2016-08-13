@@ -1,0 +1,76 @@
+<ion-header class="red-header">
+    <ion-toolbar>
+        <ion-title>
+            Selecione
+        </ion-title>
+        <ion-buttons start>
+            <button (click)="dismiss()">
+                <span primary showWhen="ios">Cancel</span>
+                <ion-icon name="md-close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Estabelecimento</ion-label>
+            <ion-select [(ngModel)]="os" submitText="Ok" cancelText="Fechar">
+                <ion-option value="mcdonalds">McDonalds</ion-option>
+                <ion-option value="habibs">Habib's</ion-option>
+                <ion-option value="subway">Subway</ion-option>
+                <ion-option value="giraffas">Giraffas</ion-option>
+                <ion-option value="bobs">Bobs</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Filtros</ion-label>
+            <ion-toggle danger checked="false"></ion-toggle>
+        </ion-item>
+        <ion-list>
+            <ion-item>
+                <span item-left>Hamburgers</span>
+                <span item-right class="price">$6</span>
+                <button danger clear item-right>
+                    Comprar
+                </button>
+            </ion-item>
+            <ion-item>
+                <span item-left>Pizza</span>
+                <span item-right class="price">$11</span>
+                <button danger clear item-right>
+                    Comprar
+                </button>
+            </ion-item>
+            <ion-item>
+                <span item-left>Salada</span>
+                <span item-right class="price">$14</span>
+                <button danger clear item-right>
+                    Comprar
+                </button>
+            </ion-item>
+            <ion-item>
+                <span item-left>Chorume</span>
+                <span item-right class="price">$0</span>
+                <button danger clear item-right>
+                    Comprar
+                </button>
+            </ion-item>
+            <ion-item>
+                <span item-left>Sua mãe</span>
+                <span item-right class="price">$0</span>
+                <button danger clear item-right>
+                    Comprar
+                </button>
+            </ion-item>
+            <ion-item>
+                <span item-left>Jooj</span>
+                <span item-right class="price">$0</span>
+                <button danger clear item-right>
+                    Comprar
+                </button>
+            </ion-item>
+        </ion-list>
+    </ion-list>
+</ion-content>

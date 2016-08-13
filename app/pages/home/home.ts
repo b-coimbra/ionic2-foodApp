@@ -12,6 +12,7 @@ import {EmAndamento} from '../in-progress/in-progress';
 })
 
 export class HomePage {
+
     home: string = "home";
     constructor(public nav: NavController) { }
 

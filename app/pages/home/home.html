@@ -4,8 +4,8 @@
             <ion-icon name="md-menu"></ion-icon>
         </button>
         <ion-buttons start right>
-            <button royal>
-                <ion-icon name="md-funnel"></ion-icon>
+            <button>
+                <ion-icon name="md-search"></ion-icon>
             </button>
             <button (click)="presentPopover($event)">
                 <ion-icon name="more"></ion-icon>
@@ -16,7 +16,7 @@
     <ion-toolbar no-border-top danger>
         <ion-segment [(ngModel)]="home" light>
             <ion-segment-button value="home">
-                Home
+                <ion-icon name="md-home"></ion-icon>
             </ion-segment-button>
             <ion-segment-button value="pedidos">
                 Pedidos
