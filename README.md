@@ -14,7 +14,7 @@ To use this app, you'll need the following things installed on your machine:
 
 ####PREVIEWS
 
-![alt tag](http://i.imgur.com/Tqj9LTj.png)![alt tag](http://i.imgur.com/EpMfLdA.png)
+![alt tag](http://i.imgur.com/Tqj9LTj.png)
 ![alt tag](http://i.imgur.com/OaekLod.png)![alt tag](http://i.imgur.com/J9qiidN.png)
-![alt tag](http://i.imgur.com/W6FllA2.png)![alt tag](http://i.imgur.com/T1SlXsX.png)
+![alt tag](http://i.imgur.com/1NAtyih.png)![alt tag](http://i.imgur.com/4QzGtC5.png)
 ![alt tag](http://i.imgur.com/7R1EipH.png)![alt tag](http://i.imgur.com/5QuzmYT.png)
