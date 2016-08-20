@@ -48,9 +48,8 @@ button.item {
 }
 
 ion-label {
-    font-family: 'Roboto Medium';
-    font-size: 1.3rem;
-    color: #787878;
+    font: 800 1.3rem 'Roboto', sans-serif;
+    color: #000;
 }
 
 .item > ion-icon    , .item-inner > ion-icon {

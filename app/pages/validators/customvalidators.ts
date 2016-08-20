@@ -1,4 +1,4 @@
-import { Control, ControlGroup } from "@angular/common";
+import {Control, ControlGroup} from "@angular/common";
 
 interface ValidationResult {
     [key: string]: boolean;

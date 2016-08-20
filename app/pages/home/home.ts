@@ -1,5 +1,5 @@
 import {Component, ViewChild, ElementRef} from '@angular/core';
-import {Loading, Modal, ViewController, Alert, Popover, Content, NavParams, NavController, Platform} from 'ionic-angular';
+import {App, Loading, Modal, ViewController, Alert, Popover, Content, NavParams, NavController, Platform} from 'ionic-angular';
 import {Page} from 'ionic-angular';
 import {EmAndamento} from '../in-progress/in-progress';
 
@@ -8,7 +8,7 @@ import {EmAndamento} from '../in-progress/in-progress';
 })
 
 @Page({
-  templateUrl: 'build/pages/home/item-content.html'
+    templateUrl: 'build/pages/home/item-content.html'
 })
 
 export class HomePage {
