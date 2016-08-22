@@ -29,7 +29,7 @@ export class MyApp {
 
     constructor(platform: Platform) {
         platform.ready().then(() => {
-            StatusBar.backgroundColorByHexString("#8e342f");
+            StatusBar.backgroundColorByHexString("#f53d3d");
         });
     }
 

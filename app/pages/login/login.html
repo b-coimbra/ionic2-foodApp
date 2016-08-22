@@ -53,7 +53,7 @@
                     <button full class="facebook">
                         <ion-icon name="logo-facebook"></ion-icon>
                     </button>
-                    <button full class="twitter">
+                    <button full class="twitter" [hidden]="isLoggedIn"  (click)="authWithTwitter()">
                         <ion-icon name="logo-twitter"></ion-icon>
                     </button>
                     <button full class="google">
@@ -80,7 +80,14 @@
                         <ion-label floating class="login-label">Senha</ion-label>
                         <ion-input type="password" value=""></ion-input>
                     </ion-item>
-
+                    <ion-item>
+                        <ion-icon name="md-calendar" item-left></ion-icon>
+                        <ion-label>Data de nascimento</ion-label>
+                        <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="myDate">
+                            <span class="button-inner">OK</span>
+                            <span class="button-inner">Cancelar</span>
+                        </ion-datetime>
+                    </ion-item>
                     <div padding>
                         <button full danger block (click)="loginEnter()" class="login-btn">Registrar</button>
                     </div>

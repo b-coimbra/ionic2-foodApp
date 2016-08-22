@@ -1,77 +1,39 @@
 <ion-header class="red-header">
-    <ion-toolbar>
+    <ion-navbar>
         <ion-title>
-            Selecione
+            {{ item.title }}
         </ion-title>
-        <ion-buttons start>
-            <button (click)="dismiss()">
-                <span primary showWhen="ios">Cancel</span>
-                <ion-icon name="md-close"></ion-icon>
-            </button>
-        </ion-buttons>
-    </ion-toolbar>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
     <ion-list>
-        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-        <ion-item>
-            <ion-label>Estabelecimento</ion-label>
-            <ion-select [(ngModel)]="os" submitText="Ok" cancelText="Fechar">
-                <ion-option value="mcdonalds">McDonalds</ion-option>
-                <ion-option value="habibs">Habib's</ion-option>
-                <ion-option value="subway">Subway</ion-option>
-                <ion-option value="giraffas">Giraffas</ion-option>
-                <ion-option value="bobs">Bobs</ion-option>
-            </ion-select>
-        </ion-item>
-        <ion-item>
-            <ion-label>Filtros</ion-label>
-            <ion-toggle danger checked="false"></ion-toggle>
-        </ion-item>
-        <ion-list>
-            <ion-item>
-                <span item-left>Hamburgers</span>
-                <span item-right class="price">$6</span>
-                <button danger clear item-right>
-                    Comprar
-                </button>
-            </ion-item>
-            <ion-item>
-                <span item-left>Pizza</span>
-                <span item-right class="price">$11</span>
-                <button danger clear item-right>
-                    Comprar
-                </button>
-            </ion-item>
-            <ion-item>
-                <span item-left>Salada</span>
-                <span item-right class="price">$14</span>
-                <button danger clear item-right>
-                    Comprar
-                </button>
-            </ion-item>
-            <ion-item>
-                <span item-left>Chorume</span>
-                <span item-right class="price">$0</span>
-                <button danger clear item-right>
-                    Comprar
-                </button>
-            </ion-item>
-            <ion-item>
-                <span item-left>Sua mãe</span>
-                <span item-right class="price">$0</span>
-                <button danger clear item-right>
-                    Comprar
-                </button>
-            </ion-item>
-            <ion-item>
-                <span item-left>Jooj</span>
-                <span item-right class="price">$0</span>
-                <button danger clear item-right>
-                    Comprar
-                </button>
-            </ion-item>
-        </ion-list>
+        <ion-card>
+
+            <img [src]="'img/' + item.image + '.png'" />
+
+            <ion-card-content>
+                <h2 class="card-title">
+                    {{ item.title }}
+                </h2>
+                <p>
+                    {{ item.description }}
+                </p>
+            </ion-card-content>
+
+            <ion-row no-padding>
+                <ion-col>
+                    <button clear small danger>
+                        <ion-icon name='star'></ion-icon>
+                    </button>
+                </ion-col>
+                <ion-col text-center>
+                    <button danger fab fab-right fab class="fab-map">
+                      <ion-icon name='md-cart'></ion-icon>
+                    </button>
+                </ion-col>
+            </ion-row>
+
+        </ion-card>
     </ion-list>
 </ion-content>

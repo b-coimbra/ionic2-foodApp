@@ -12,6 +12,17 @@ import {CustomValidators} from '../validators/CustomValidators';
 
 export class LoginPage {
 
+/*
+    messagesRef: Firebase;
+    isLoggedIn: boolean;
+    authData: any;
+
+    authDataProfileName: string;
+    authDataProfileImage: string;
+    authDataProfileDescription: string;
+    authDataProfileMemberSince: string;
+    authDataProfileNoFollowers: int;
+    authDataProfileLocation: string;*/
 
     authForm: ControlGroup;
     username: AbstractControl;
@@ -19,6 +30,23 @@ export class LoginPage {
 
     home: string = "home";
     constructor(public nav: NavController, private navController: NavController, private fb: FormBuilder) {
+        /*this.messagesRef = "https://mrfood-e4756.firebaseapp.com";
+        this.messagesRef = new Firebase(this.firebaseUrl);
+        this.messagesRef.onAuth((user) => {
+            if (user) {
+                this.authData = user;
+
+                this.authDataProfileImage  = this.authData.twitter.profileImageURL.replace(/\_normal/,"");
+                this.authDataProfileName = this.authData.twitter.displayName;
+                this.authDataProfileDescription = this.authData.twitter.cachedUserProfile.description;
+                this.authDataProfileMemberSince = this.authData.twitter.cachedUserProfile.created_at;
+                this.authDataProfileNoFollowers = this.authData.twitter.cachedUserProfile.followers_count;
+                this.authDataProfileLocation = this.authData.twitter.cachedUserProfile.location;
+
+                this.isLoggedIn = true;
+            }
+        });*/
+
         this.authForm = fb.group({
             'username': ['', Validators.compose([Validators.required, Validators.minLength(3), CustomValidators.checkFirstCharacterValidator])],
             'password': ['', Validators.compose([Validators.required, Validators.minLength(8), CustomValidators.checkFirstCharacterValidator])]
@@ -33,6 +61,19 @@ export class LoginPage {
             console.log('Valores enviados: ', value);
         }
     }
+
+    /*authWithTwitter() {
+        this.messagesRef.authWithOAuthPopup("twitter", (error) => {
+            if (error) {
+                console.log(error);
+            }
+        }, {remember: "sessionOnly"});
+    }
+
+    unauthWithTwitter() {
+        this.messagesRef.unauth();
+        this.isLoggedIn = false;
+    }*/
 
     loginEnter() {
         let loading = Loading.create({

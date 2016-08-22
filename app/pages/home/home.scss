@@ -20,8 +20,23 @@
     color: #FFF;
 }
 
-ion-card {
+.home-cards {
+    position: relative;
     border-radius: 0;
+    width: 100%;
+    margin: 0 auto;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: -moz-linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* ff3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,1))); /* safari4+,chrome */
+        background: -webkit-linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* safari5.1+,chrome10+ */
+        width: 100%;
+        bottom: 0;
+        height: 100%;
+    }
 }
 
 .toolbar {
@@ -39,29 +54,11 @@ ion-segment {
 
 .card-background-page {
 
-  ion-card {
+  .item-image {
     position: relative;
     text-align: center;
     width: 100%;
     margin: 0 auto;
-
-    &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        background: -moz-linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* ff3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,1))); /* safari4+,chrome */
-        background: -webkit-linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* safari5.1+,chrome10+ */
-        width: 100%;
-        bottom: 0;
-        height: 100%;
-    }
-
-    button {
-        width: 45px;
-        height: 45px;
-        margin: -5px;
-    }
   }
 
   button, .card-title, .card-subtitle {
@@ -70,17 +67,21 @@ ion-segment {
 
   .card-title {
     position: absolute;
+    margin: 0 auto;
+    text-align: center;
     top: 36%;
     font-size: 2.0em;
     width: 100%;
     font-weight: bold;
-    color: #fff;
+    color: #FFF;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
   }
 
   .card-subtitle {
     font-size: 1.0em;
     position: absolute;
     top: 52%;
+    text-align: center;
     width: 100%;
     color: #fff;
   }
