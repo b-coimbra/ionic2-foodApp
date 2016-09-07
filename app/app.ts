@@ -10,6 +10,7 @@ import {HistoricoPage} from './pages/historico/historico';
 import {ConfiguracoesPage} from './pages/configuracoes/configuracoes';
 import {LoginPage} from './pages/login/login';
 import {SobrePage} from './pages/sobre/sobre';
+import {Fire} from './util/fire';
 
 @Component({
     templateUrl: 'build/app.html'
@@ -38,4 +39,4 @@ export class MyApp {
     };
 }
 
-ionicBootstrap(MyApp);
+ionicBootstrap(MyApp, [Fire]);

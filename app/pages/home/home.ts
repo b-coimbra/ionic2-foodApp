@@ -6,6 +6,7 @@ import {EmAndamento} from '../in-progress/in-progress';
 @Component({
     templateUrl: 'build/pages/home/item-content.html'
 })
+
 class NavigationDetailsPage {
     item;
 
@@ -17,6 +18,7 @@ class NavigationDetailsPage {
 @Component({
     templateUrl: 'build/pages/home/home.html',
 })
+
 export class HomePage {
     items = [];
 

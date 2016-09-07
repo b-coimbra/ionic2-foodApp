@@ -1,10 +1,10 @@
-<ion-header>
+<!--<ion-header>
     <ion-navbar danger>
         <button menuToggle>
             <ion-icon name="md-menu"></ion-icon>
         </button>
     </ion-navbar>
-</ion-header>
+</ion-header>-->
 
 <ion-content class="login">
     <div class="logo">
@@ -50,7 +50,7 @@
                 </form>
 
                 <div class="social-buttons">
-                    <button full class="facebook">
+                    <button full class="facebook" (click)="onLogin()">
                         <ion-icon name="logo-facebook"></ion-icon>
                     </button>
                     <button full class="twitter" [hidden]="isLoggedIn"  (click)="authWithTwitter()">
