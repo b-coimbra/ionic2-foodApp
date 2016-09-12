@@ -5,7 +5,7 @@ Academic project in progress.
 ## Requirements
 To use this app, you'll need the following things installed on your machine:
 
-1. [Ionic](http://ionicframework.com/)
+1. [Ionic2](http://ionicframework.com/docs/v2/getting-started/installation/)
 2. [Nodejs](http://nodejs.org)
 
 ## Installation
