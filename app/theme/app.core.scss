@@ -49,7 +49,7 @@ button.item {
 
 ion-label {
     font: 800 1.3rem 'Roboto', sans-serif;
-    color: #000;
+    color: #4e4e4e;
 }
 
 .item > ion-icon    , .item-inner > ion-icon {
@@ -66,10 +66,10 @@ ion-list > .item:last-child, ion-list > .item-wrapper:last-child .item {
     bottom: 0 !important;
 }
 
-.button:hover:not(.disable-hover) {
+.social-buttons .button:hover:not(.disable-hover) {
     background-color: #2d3238;
 }
 
-.button.activated {
+.social-buttons .button.activated {
     background-color: #2d3238;
 }

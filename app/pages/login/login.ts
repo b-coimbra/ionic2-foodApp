@@ -3,7 +3,7 @@ import {NavController} from 'ionic-angular';
 import {Component} from '@angular/core';
 import {HomePage} from '../home/home';
 import {FORM_DIRECTIVES, FormBuilder,  ControlGroup, Validators, AbstractControl} from '@angular/common';
-import {CustomValidators} from '../validators/CustomValidators';
+import {CustomValidators} from '../validators/customvalidators';
 import {FacebookLogin} from '../../util/facebook-login';
 import {Fire} from '../../util/fire';
 
@@ -11,7 +11,6 @@ import {Fire} from '../../util/fire';
     templateUrl: 'build/pages/login/login.html',
     directives: [FORM_DIRECTIVES]
 })
-
 export class LoginPage {
 
     authForm: ControlGroup;
