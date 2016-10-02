@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar danger>
+        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+        <button menuToggle>
+            <ion-icon name="md-menu"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            {{ item }}
+        </ion-item>
+    </ion-list>
+</ion-content>

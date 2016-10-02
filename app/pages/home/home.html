@@ -4,7 +4,7 @@
             <ion-icon name="md-menu"></ion-icon>
         </button>
         <ion-buttons start right>
-            <button (click)="openPage(pesquisa)">
+            <button [navPush]="searchPage">
                 <ion-icon name="md-search"></ion-icon>
             </button>
             <button (click)="presentPopover($event)">
@@ -30,9 +30,9 @@
         <ion-list *ngSwitchWhen="'home'" class="home">
             <ion-list *ngFor="#item of items" (click)="openNavDetailsPage(item)">
                 <ion-card class="home-cards">
-                <img [src]="'img/' + item.image + '.png'" class="item-image" />
-                <div class="card-title">{{ item.title }}</div>
-                <div class="card-subtitle">{{ item.quantity + " Disponíveis" }}</div>
+                    <img [src]="'img/' + item.image + '.png'" class="item-image" />
+                    <div class="card-title">{{ item.title }}</div>
+                    <div class="card-subtitle">{{ item.quantity + " Disponíveis" }}</div>
                 </ion-card>
             </ion-list>
         </ion-list>
@@ -45,5 +45,4 @@
             </ion-list>
         </ion-list>
     </div>
-
 </ion-content>

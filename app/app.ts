@@ -9,6 +9,7 @@ import {HistoricoPage} from './pages/historico/historico';
 import {ConfiguracoesPage} from './pages/configuracoes/configuracoes';
 import {LoginPage} from './pages/login/login';
 import {SobrePage} from './pages/sobre/sobre';
+import {SearchPage} from './pages/search/search';
 import {Fire} from './util/fire';
 
 @Component({
@@ -23,6 +24,7 @@ export class MyApp {
     configuracoes = ConfiguracoesPage;
     login = LoginPage;
     sobre = SobrePage;
+    pesquisa = SearchPage;
 
     rootPage: any = this.home;
 
