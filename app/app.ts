@@ -10,6 +10,7 @@ import {ConfiguracoesPage} from './pages/configuracoes/configuracoes';
 import {LoginPage} from './pages/login/login';
 import {SobrePage} from './pages/sobre/sobre';
 import {SearchPage} from './pages/search/search';
+import {SliderPage} from './pages/slider/slider';
 import {Fire} from './util/fire';
 
 @Component({
@@ -25,8 +26,9 @@ export class MyApp {
     login = LoginPage;
     sobre = SobrePage;
     pesquisa = SearchPage;
+    slider = SliderPage;
 
-    rootPage: any = this.home;
+    rootPage: any = this.slider;
 
     constructor(platform: Platform) {
         platform.ready().then(() => {
