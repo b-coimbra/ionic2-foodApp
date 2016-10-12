@@ -46,10 +46,15 @@ export class HomePage {
     items = [];
 
     home: string = "home";
+
     constructor(public nav: NavController) {
         this.items = [
             {
                 'title': 'Hamburger',
+                names: [
+                {name:'de carne'},
+                {name:'de frango'}
+                ],
                 'icon': 'ios-checkmark',
                 'quantity':'10',
                 'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -58,6 +63,7 @@ export class HomePage {
             },
             {
                 'title': 'Pizza',
+                'name':'de queijo',
                 'quantity':'7',
                 'icon': 'ios-close',
                 'description': 'orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -66,6 +72,7 @@ export class HomePage {
             },
             {
                 'title': 'Salada',
+                'name':'de macarrão',
                 'quantity':'15',
                 'icon': 'ios-close',
                 'description': 'orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -76,10 +83,10 @@ export class HomePage {
     }
 
     public presentPopover(ev){
-       let popover = Popover.create(PopoverPage);
-       this.nav.present(popover, {
-         ev: ev
-       });
+        let popover = Popover.create(PopoverPage);
+        this.nav.present(popover, {
+            ev: ev
+        });
     }
 
     openNavDetailsPage(item) {

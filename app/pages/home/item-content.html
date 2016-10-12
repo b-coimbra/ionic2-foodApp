@@ -7,34 +7,15 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
-        <ion-card>
+      <ion-card class="cards-list-demo">
+      <ion-searchbar>
 
-            <img [src]="'img/' + item.image + '.png'" />
-
-            <ion-card-content>
-                <h2 class="card-title">
-                    {{ item.title }}
-                </h2>
-                <p>
-                    {{ item.description }}
-                </p>
-            </ion-card-content>
-
-
-            <ion-row no-padding>
-                <ion-col>
-                    <button clear small danger>
-                        <ion-icon name='star'></ion-icon>
-                    </button>
-                </ion-col>
-                <ion-col text-center>
-                    <button danger fab fab-right fab class="fab-map" (click)="openModal({charNum: 0})">
-                        <ion-icon name='md-cart'></ion-icon>
-                    </button>
-                </ion-col>
-            </ion-row>
-
-        </ion-card>
-    </ion-list>
+      </ion-searchbar>
+        <ion-list >
+          <button ion-item (click)="purchase()">
+            <ion-icon name='ios-arrow-forward' item-right></ion-icon>
+            {{ item.title }}
+          </button>
+        </ion-list>
+      </ion-card>
 </ion-content>
