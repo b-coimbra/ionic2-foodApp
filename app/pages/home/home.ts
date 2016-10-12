@@ -52,7 +52,7 @@ export class HomePage {
                 'title': 'Hamburger',
                 'icon': 'ios-checkmark',
                 'quantity':'10',
-                'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                'description': 'Selecione a loja em que deseja comprar um Hamburger.',
                 'image':'burger',
                 'color': '#28df4f'
             },
@@ -60,7 +60,7 @@ export class HomePage {
                 'title': 'Pizza',
                 'quantity':'7',
                 'icon': 'ios-close',
-                'description': 'orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                'description': 'Selecione a loja em que deseja comprar uma Pizza.',
                 'image':'pizza',
                 'color': '#f53d3d'
             },
@@ -68,7 +68,7 @@ export class HomePage {
                 'title': 'Salada',
                 'quantity':'15',
                 'icon': 'ios-close',
-                'description': 'orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                'description': 'Selecione a loja em que deseja comprar sua Salada.',
                 'image':'salad',
                 'color': '#f53d3d'
             }
