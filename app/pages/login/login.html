@@ -31,16 +31,16 @@
                         <ion-input type="text" value="" [ngFormControl]="username"></ion-input>
                     </ion-item>
                     <div *ngIf="username.hasError('required') && username.touched"
-                    class="error-box">* O Usuário não pode ficar em branco.</div>
+                    class="error-box">* O Usuário não deve ficar em branco.</div>
                     <ion-item [class.error]="!password.valid && password.touched">
                         <ion-icon name="md-lock" item-left></ion-icon>
                         <ion-label floating class="login-label">Senha</ion-label>
                         <ion-input type="password" value="" [ngFormControl]="password"></ion-input>
                     </ion-item>
                     <div *ngIf="password.hasError('required') && password.touched"
-                    class="error-box">* Senha não pode ficar em branco.</div>
+                    class="error-box">* A senha não deve ficar em branco.</div>
                     <div *ngIf="password.hasError('minlength') && password.touched"
-                    class="error-box">* O tamanho mínimo é 8 caracteres.</div>
+                    class="error-box">* A senha deve conter no minimo 8 caracteres.</div>
                     <div *ngIf="password.hasError('checkFirstCharacterValidator') && password.touched"
                     class="error-box">* A senha não pode começar com números.</div>
 

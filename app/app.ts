@@ -28,7 +28,7 @@ export class MyApp {
     pesquisa = SearchPage;
     slider = SliderPage;
 
-    rootPage: any = this.slider;
+    rootPage: any = this.home;
 
     constructor(platform: Platform) {
         platform.ready().then(() => {
