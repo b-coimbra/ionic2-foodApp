@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Platform, ionicBootstrap} from 'ionic-angular';
 import {App} from 'ionic-angular';
-import {NavController, NavParams} from 'ionic-angular';
+import {NavController, NavParams, Loading} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {EmAndamento} from './pages/in-progress/in-progress';
@@ -31,7 +31,7 @@ export class MyApp {
     slider = SliderPage;
     compra = PurchasePage;
 
-    rootPage: any = this.configuracoes;
+    rootPage: any = this.slider;
 
     constructor(platform: Platform) {
         platform.ready().then(() => {
@@ -56,7 +56,9 @@ export class MyApp {
         window.localStorage.removeItem('username');
         window.localStorage.removeItem('password');
 
-        this.rootPage = this.login
+        setTimeout(() => {
+            this.rootPage = this.login;
+        }, 1000);
     }
 }
 

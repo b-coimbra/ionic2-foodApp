@@ -49,10 +49,11 @@ export class LoginPage {
     loginEnter() {
         let loading = Loading.create({
             content: "Espere um momento...",
-            duration: 3000,
-            dismissOnPageChange: true
+            duration: 2300,
+            dismissOnPageChange: false
         });
-        this.nav.present(loading);
-        this.nav.setRoot(HomePage);
+        this.nav.present(loading).then(()=>{
+            this.nav.setRoot(HomePage);
+        });
     }
 }

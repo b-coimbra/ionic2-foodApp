@@ -7,14 +7,12 @@ import {HomePage} from '../home/home';
     templateUrl: 'build/pages/favoritos/favoritos.html'
 })
 
-
-
 export class FavoritosPage {
     confirmMessage() {
         const toast = Toast.create({
-            message: 'Item excluido',
+            message: 'Item excluido!',
             duration: 2000,
-            position: "middle"
+            position: "bottom"
         });
         this.nav.present(toast);
     }

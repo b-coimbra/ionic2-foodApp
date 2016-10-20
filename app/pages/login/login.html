@@ -27,23 +27,14 @@
                 <form [ngFormModel]="authForm" (ngSubmit)="onSubmit(authForm.value)">
                     <ion-item [class.error]="!username.valid && username.touched">
                         <ion-icon name="md-person" item-left></ion-icon>
-                        <ion-label floating class="login-label">Email</ion-label>
+                        <ion-label floating class="login-label">Usuário</ion-label>
                         <ion-input type="text" value="" [ngFormControl]="username"></ion-input>
                     </ion-item>
-                    <div *ngIf="username.hasError('required') && username.touched"
-                    class="error-box">* O Email não deve ficar em branco.</div>
                     <ion-item [class.error]="!password.valid && password.touched">
                         <ion-icon name="md-lock" item-left></ion-icon>
                         <ion-label floating class="login-label">Senha</ion-label>
                         <ion-input type="password" value="" [ngFormControl]="password"></ion-input>
                     </ion-item>
-                    <div *ngIf="password.hasError('required') && password.touched"
-                    class="error-box">* A senha não deve ficar em branco.</div>
-                    <div *ngIf="password.hasError('minlength') && password.touched"
-                    class="error-box">* A senha deve conter no minimo 8 caracteres.</div>
-                    <div *ngIf="password.hasError('checkFirstCharacterValidator') && password.touched"
-                    class="error-box">* A senha não pode começar com números.</div>
-
                     <div padding>
                         <button type="submit" full danger block (click)="loginEnter()" class="login-btn" [disabled]="!authForm.valid">Entrar</button>
                     </div>
@@ -64,22 +55,30 @@
         </ion-list>
         <ion-list *ngSwitchWhen="'cadastro'" class="cadastro">
             <ion-list inset>
-                <form>
-                    <ion-item>
+                <form [ngFormModel]="authForm" (ngSubmit)="onSubmit(authForm.value)">
+                    <ion-item [class.error]="!username.valid && username.touched">
                         <ion-icon name="md-person" item-left></ion-icon>
                         <ion-label floating class="login-label">Nome</ion-label>
-                        <ion-input type="text" value=""></ion-input>
+                        <ion-input type="text" value="" [ngFormControl]="username"></ion-input>
                     </ion-item>
+                    <div *ngIf="username.hasError('required') && username.touched"
+                    class="error-box">* O nome de usuário não deve ficar em branco.</div>
                     <ion-item>
                         <ion-icon name="ios-mail-outline" item-left></ion-icon>
                         <ion-label floating class="login-label">E-mail</ion-label>
                         <ion-input type="text" value=""></ion-input>
                     </ion-item>
-                    <ion-item>
+                    <ion-item [class.error]="!password.valid && password.touched">
                         <ion-icon name="ios-lock-outline" item-left></ion-icon>
                         <ion-label floating class="login-label">Senha</ion-label>
-                        <ion-input type="password" value=""></ion-input>
+                        <ion-input type="password" value="" [ngFormControl]="password"></ion-input>
                     </ion-item>
+                    <div *ngIf="password.hasError('required') && password.touched"
+                    class="error-box">* A senha não deve ficar em branco.</div>
+                    <div *ngIf="password.hasError('minlength') && password.touched"
+                    class="error-box">* A senha deve conter no minimo 8 caracteres.</div>
+                    <div *ngIf="password.hasError('checkFirstCharacterValidator') && password.touched"
+                    class="error-box">* A senha não pode começar com números.</div>
                     <ion-item>
                         <ion-icon name="md-calendar" item-left></ion-icon>
                         <ion-label>Data de nascimento</ion-label>
@@ -89,7 +88,7 @@
                         </ion-datetime>
                     </ion-item>
                     <div padding>
-                        <button full danger block (click)="loginEnter()" class="login-btn">Registrar</button>
+                        <button full danger block (click)="loginEnter()" class="login-btn"  [disabled]="!authForm.valid">Registrar</button>
                     </div>
                 </form>
             </ion-list>

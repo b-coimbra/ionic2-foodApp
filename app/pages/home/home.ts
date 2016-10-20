@@ -1,5 +1,5 @@
 import {Component, ViewChild, ElementRef} from '@angular/core';
-import {App, Loading, ViewController, Alert, Popover, Content, NavParams, NavController, Platform} from 'ionic-angular';
+import {App, Toast, Loading, ViewController, Alert, Popover, Content, NavParams, NavController, Platform} from 'ionic-angular';
 import {Page} from 'ionic-angular';
 import {SearchPage} from '../search/search';
 import {ConfiguracoesPage} from '../configuracoes/configuracoes';
@@ -27,6 +27,71 @@ class NavigationDetailsPage {
 })
 class PopoverPage {
     constructor(public viewCtrl: ViewController, public navCtrl: NavController) { }
+
+    SaveChanges(){
+        const toast = Toast.create({
+            message: 'Filtos salvos.',
+            position: "top",
+            duration: 2000,
+        });
+        this.navCtrl.present(toast);
+    }
+
+    openFilters() {
+        let alert = Alert.create();
+        alert.setTitle('Filtros');
+
+        alert.addInput({
+            type: 'checkbox',
+            label: 'Relevância',
+            value: 'value1',
+            checked: true
+        });
+
+        alert.addInput({
+            type: 'checkbox',
+            label: 'Menor Preço',
+            value: 'value2'
+        });
+
+        alert.addInput({
+            type: 'checkbox',
+            label: 'Distância',
+            value: 'value3',
+            checked: true
+        });
+
+        alert.addInput({
+            type: 'checkbox',
+            label: 'Tempo De Entrega',
+            value: 'value4'
+        });
+
+        alert.addInput({
+            type: 'checkbox',
+            label: 'Entrega grátis',
+            value: 'value5'
+        });
+
+        alert.addInput({
+            type: 'checkbox',
+            label: 'Pagamento online',
+            value: 'value7'
+        });
+
+        alert.addButton('Cancel');
+        alert.addButton({
+            text: 'Ok',
+            handler: () => {
+                alert.dismiss().then(()=> {
+                    this.SaveChanges();
+                });
+            }
+        });
+        this.viewCtrl.dismiss().then(()=>{
+            this.navCtrl.present(alert);
+        });
+    }
 
     close() {
         this.viewCtrl.dismiss();

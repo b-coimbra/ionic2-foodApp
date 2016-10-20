@@ -1,4 +1,4 @@
-import {NavController, Page, Toast, Alert} from 'ionic-angular';
+import {NavController, Page, Toast, Alert, Range} from 'ionic-angular';
 import {Component} from '@angular/core';
 import {HomePage} from '../home/home';
 import {LoginPage} from '../login/login'
@@ -13,9 +13,11 @@ import {LoginPage} from '../login/login'
 })
 
 export class ConfiguracoesPage {
-    structure: number = 8;
 
-    constructor(public nav: NavController) {}
+    structure: number = 5;
+
+    constructor(public nav: NavController) {
+    }
 
     SaveChanges(){
         const toast = Toast.create({
@@ -28,19 +30,19 @@ export class ConfiguracoesPage {
     }
 
     DeleteAccount() {
-      let alert = Alert.create({
-        title: 'Excluir conta?',
-        message: 'Nota: você não poderá recuperar sua conta.',
-        buttons: [{
-            text: "Cancelar"
-        },
-        {
-            text: "Excluir",
-            handler: () => {
-                this.nav.setRoot(LoginPage);
-            }
-        }]
-      });
-      this.nav.present(alert);
+        let alert = Alert.create({
+            title: 'Excluir conta?',
+            message: 'Nota: você não poderá recuperar sua conta.',
+            buttons: [{
+                text: "Cancelar"
+            },
+            {
+                text: "Excluir",
+                handler: () => {
+                    this.nav.setRoot(LoginPage);
+                }
+            }]
+        });
+        this.nav.present(alert);
     }
 }

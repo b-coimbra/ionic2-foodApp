@@ -18,11 +18,13 @@ export class ItemContent {
 
     items;
 
-    constructor(private nav: NavController){
+    constructor(private nav: NavController, public viewCtrl: ViewController){
 
     }
 
     purchase() {
-        this.nav.push(PurchasePage);
+        this.viewCtrl.dismiss().then(()=>{
+            this.nav.setRoot(PurchasePage);
+        });
     }
 }
