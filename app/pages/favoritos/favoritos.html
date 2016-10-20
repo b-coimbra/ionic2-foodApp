@@ -14,23 +14,20 @@
         <ion-list>
             <button ion-item (click)="openMenu()">
                 <span item-left>Hamburger</span>
-                <ion-icon name="ios-more" item-right></ion-icon>
             </button>
         </ion-list>
         <ion-list>
             <button ion-item (click)="openMenu()">
                 <span item-left>Pizza</span>
-                <ion-icon name="ios-more" item-right></ion-icon>
             </button>
         </ion-list>
         <ion-list>
             <button ion-item (click)="openMenu()">
                 <span item-left>Salada</span>
-                <ion-icon name="ios-more" item-right></ion-icon>
             </button>
         </ion-list>
     </ion-card>
-    <button fab danger fab-bottom fab-right>
-        <ion-icon name="add"></ion-icon>
+    <button fab danger fab-bottom fab-right (click)="deleteAll()">
+        <ion-icon name="md-trash"></ion-icon>
     </button>
 </ion-content>

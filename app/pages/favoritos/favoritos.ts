@@ -17,6 +17,25 @@ export class FavoritosPage {
         this.nav.present(toast);
     }
 
+    deleteAll() {
+        let alert = Alert.create({
+            title: 'Excluir tudo?',
+            message: 'Nota: Esta ação não poderá ser revertida.',
+            buttons: [{
+                text: "Cancelar",
+            },
+            {
+                text: "Excluir",
+                handler: () => {
+                    alert.dismiss().then(()=>{
+                        this.confirmMessage();
+                    });
+                }
+            }]
+        });
+        this.nav.present(alert);
+    }
+
     showConfirm() {
         let alert = Alert.create({
             title: 'Excluir?',
@@ -48,13 +67,6 @@ export class FavoritosPage {
                         actionSheet.dismiss().then(()=>{
                             this.showConfirm();
                         });
-                    }
-                },
-                {
-                    text: 'Compartilhar',
-                    icon: !this.platform.is('ios') ? 'share' : null,
-                    handler: () => {
-                        console.log('Share clicked');
                     }
                 },
                 {

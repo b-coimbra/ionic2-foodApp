@@ -30,7 +30,7 @@ class PopoverPage {
 
     SaveChanges(){
         const toast = Toast.create({
-            message: 'Filtos salvos.',
+            message: 'Filtos atualizados.',
             position: "top",
             duration: 2000,
         });

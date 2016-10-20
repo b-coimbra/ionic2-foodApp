@@ -39,7 +39,9 @@ export class ConfiguracoesPage {
             {
                 text: "Excluir",
                 handler: () => {
-                    this.nav.setRoot(LoginPage);
+                    setTimeout(() => {
+                        this.nav.setRoot(LoginPage);
+                    }, 500)
                 }
             }]
         });

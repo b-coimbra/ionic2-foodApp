@@ -58,7 +58,7 @@ export class MyApp {
 
         setTimeout(() => {
             this.rootPage = this.login;
-        }, 1000);
+        }, 500);
     }
 }
 
