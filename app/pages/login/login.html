@@ -15,7 +15,7 @@
             <ion-segment-button value="home">
                 Entrar
             </ion-segment-button>
-            <ion-segment-button value="pedidos">
+            <ion-segment-button value="cadastro">
                 Cadastrar
             </ion-segment-button>
         </ion-segment>
@@ -27,11 +27,11 @@
                 <form [ngFormModel]="authForm" (ngSubmit)="onSubmit(authForm.value)">
                     <ion-item [class.error]="!username.valid && username.touched">
                         <ion-icon name="md-person" item-left></ion-icon>
-                        <ion-label floating class="login-label">Usuário</ion-label>
+                        <ion-label floating class="login-label">Email</ion-label>
                         <ion-input type="text" value="" [ngFormControl]="username"></ion-input>
                     </ion-item>
                     <div *ngIf="username.hasError('required') && username.touched"
-                    class="error-box">* O Usuário não deve ficar em branco.</div>
+                    class="error-box">* O Email não deve ficar em branco.</div>
                     <ion-item [class.error]="!password.valid && password.touched">
                         <ion-icon name="md-lock" item-left></ion-icon>
                         <ion-label floating class="login-label">Senha</ion-label>
@@ -62,7 +62,7 @@
                 </div>
             </ion-list>
         </ion-list>
-        <ion-list *ngSwitchWhen="'pedidos'" class="pedidos">
+        <ion-list *ngSwitchWhen="'cadastro'" class="cadastro">
             <ion-list inset>
                 <form>
                     <ion-item>

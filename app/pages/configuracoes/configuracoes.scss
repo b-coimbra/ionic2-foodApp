@@ -7,3 +7,11 @@
     font-weight: bold;
     color: #777777;
 }
+
+.config ion-list > .item:last-child, ion-list > .item-wrapper:last-child .item {
+    border-bottom: 1px solid #dedede !important;
+}
+
+.toast-button {
+    color: #f53d3d;
+}

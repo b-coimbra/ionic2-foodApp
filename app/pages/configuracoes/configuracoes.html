@@ -9,7 +9,7 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="config">
     <ion-list padding>
         <ion-item>
             <ion-label>Filtro[alterar]</ion-label>
@@ -23,12 +23,18 @@
             <ion-label>Filtro[alterar]</ion-label>
             <ion-toggle danger checked="true"></ion-toggle>
         </ion-item>
-        <ion-item>
-            <ion-label>Filtro[alterar]</ion-label>
-            <ion-toggle danger checked="false"></ion-toggle>
-        </ion-item>
     </ion-list>
-    <ion-list no-border padding-top>
+    <ion-list padding>
+        <ion-list-header>
+            Preço
+            <ion-badge item-right danger>8</ion-badge>
+        </ion-list-header>
+        <ion-item>
+            <ion-range pin="true" [(ngModel)]="structure" max="35" min="3" danger>
+                <ion-icon range-left small name="logo-usd"></ion-icon>
+                <ion-icon range-right name="logo-usd"></ion-icon>
+            </ion-range>
+        </ion-item>
         <ion-item>
             <ion-icon name='md-locate' item-left></ion-icon>
             Cidade
@@ -38,7 +44,8 @@
         </ion-item>
 
         <ion-item>
-            <ion-toggle danger checked="true"></ion-toggle>
+            <!-- <ion-toggle danger checked="true"></ion-toggle> -->
+            <ion-checkbox item-right danger checked="true"></ion-checkbox>
             <ion-label>
                 Delivery
             </ion-label>
@@ -48,7 +55,7 @@
     <div padding>
         <center>
             <button danger full (click)="SaveChanges()">Salvar</button>
-            <button clear dark full class="remove-account">Excluir Conta</button>
+            <button clear dark full class="remove-account" (click)="DeleteAccount()">Excluir Conta</button>
         </center>
     </div>
 </ion-content>

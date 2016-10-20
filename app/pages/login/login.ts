@@ -1,5 +1,5 @@
 import {Page, Loading} from 'ionic-angular';
-import {NavController} from 'ionic-angular';
+import {NavController, Toast} from 'ionic-angular';
 import {Component} from '@angular/core';
 import {HomePage} from '../home/home';
 import {FORM_DIRECTIVES, FormBuilder,  ControlGroup, Validators, AbstractControl} from '@angular/common';
@@ -34,7 +34,6 @@ export class LoginPage {
         }
     }
 
-
     onLogin() {
         FacebookLogin.login(response => {
             this.fire.login(response.accessToken, () => {
@@ -54,5 +53,6 @@ export class LoginPage {
             dismissOnPageChange: true
         });
         this.nav.present(loading);
+        this.nav.setRoot(HomePage);
     }
 }

@@ -3,6 +3,7 @@ import {App, Loading, ViewController, Alert, Popover, Content, NavParams, NavCon
 import {Page} from 'ionic-angular';
 import {SearchPage} from '../search/search';
 import {ConfiguracoesPage} from '../configuracoes/configuracoes';
+import {LoginPage} from '../login/login';
 
 @Component({
     templateUrl: 'build/pages/home/item-content.html'
@@ -46,14 +47,17 @@ export class HomePage {
     items = [];
 
     home: string = "home";
+    username;
 
     constructor(public nav: NavController) {
+        this.nav = nav;
+        this.username = window.localStorage.getItem('username');
         this.items = [
             {
                 'title': 'Hamburger',
                 names: [
-                {name:'de carne'},
-                {name:'de frango'}
+                    {name:'de carne'},
+                    {name:'de frango'}
                 ],
                 'icon': 'ios-checkmark',
                 'quantity':'10',

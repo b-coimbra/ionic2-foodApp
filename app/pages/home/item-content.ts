@@ -10,18 +10,19 @@ import {PurchasePage} from '../purchase/purchase';
 })
 
 @Page({
-    templateUrl: 'build/pages/home/item-content.html'
+    templateUrl: 'build/pages/purchase/purchase.html'
 })
 
 export class ItemContent {
     searchPage = SearchPage;
 
-    purchase() {
-        this.nav.push(PurchasePage);
-    }
-
     items;
 
     constructor(private nav: NavController){
+
+    }
+
+    purchase() {
+        this.nav.push(PurchasePage);
     }
 }

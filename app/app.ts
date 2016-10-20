@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Platform, ionicBootstrap} from 'ionic-angular';
 import {App} from 'ionic-angular';
+import {NavController, NavParams} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {EmAndamento} from './pages/in-progress/in-progress';
@@ -11,6 +12,7 @@ import {LoginPage} from './pages/login/login';
 import {SobrePage} from './pages/sobre/sobre';
 import {SearchPage} from './pages/search/search';
 import {SliderPage} from './pages/slider/slider';
+import {PurchasePage} from './pages/purchase/purchase';
 import {Fire} from './util/fire';
 
 @Component({
@@ -27,8 +29,9 @@ export class MyApp {
     sobre = SobrePage;
     pesquisa = SearchPage;
     slider = SliderPage;
+    compra = PurchasePage;
 
-    rootPage: any = this.home;
+    rootPage: any = this.configuracoes;
 
     constructor(platform: Platform) {
         platform.ready().then(() => {
@@ -39,6 +42,22 @@ export class MyApp {
     openPage(option) {
         this.rootPage = option;
     };
+
+    checkPreviousAuthorization(): void {
+        if((window.localStorage.getItem('username') === "undefined" || window.localStorage.getItem('username') === null) &&
+        (window.localStorage.getItem('password') === "undefined" || window.localStorage.getItem('password') === null)) {
+            this.rootPage = this.login;
+        } else {
+            this.rootPage = this.home;
+        }
+    }
+
+    logout(): void {
+        window.localStorage.removeItem('username');
+        window.localStorage.removeItem('password');
+
+        this.rootPage = this.login
+    }
 }
 
 ionicBootstrap(MyApp, [Fire]);
