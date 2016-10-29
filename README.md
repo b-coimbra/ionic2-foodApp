@@ -5,7 +5,7 @@ Academic project in progress.
 ## Requirements
 To use this app, you'll need the following things installed on your machine:
 
-1. [Ionic2](http://ionicframework.com/docs/v2/getting-started/installation/)
+1. [Ionic2](http://ionicframework.com/docs/v2/getting-started/installation/)(currently using 2.0.0-beta.37)
 2. [Nodejs](http://nodejs.org)
 
 ## Installation
@@ -15,6 +15,6 @@ To use this app, you'll need the following things installed on your machine:
 ####PREVIEWS
 
 ![alt tag](http://i.imgur.com/Tqj9LTj.png)
-![alt tag](http://i.imgur.com/OaekLod.png)![alt tag](http://i.imgur.com/J9qiidN.png)
-![alt tag](http://i.imgur.com/1NAtyih.png)![alt tag](http://i.imgur.com/4QzGtC5.png)
-![alt tag](http://i.imgur.com/xhSdt1j.png)![alt tag](http://i.imgur.com/5QuzmYT.png)
+![alt tag](http://i.imgur.com/pabdSbv.png)![alt tag](http://i.imgur.com/3Nqhdxr.png)
+![alt tag](http://i.imgur.com/ojvTXPi.png)![alt tag](http://i.imgur.com/DOyfoi0.png)
+![alt tag](http://i.imgur.com/xhSdt1j.png)![alt tag](http://i.imgur.com/s97iSZ7.png)
