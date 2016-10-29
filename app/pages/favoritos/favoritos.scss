@@ -1,3 +1,7 @@
 .action-sheets-basic-page .action-sheet-cancel ion-icon, .action-sheets-basic-page .action-sheet-destructive ion-icon {
     color: #000 !important;
 }
+
+.alert-input:focus {
+    border-bottom: 2px solid #fd6262 !important;
+}

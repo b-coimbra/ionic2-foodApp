@@ -10,24 +10,27 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
-        <ion-list>
-            <button ion-item (click)="openMenu()">
-                <span item-left>Hamburger</span>
-            </button>
-        </ion-list>
-        <ion-list>
-            <button ion-item (click)="openMenu()">
-                <span item-left>Pizza</span>
-            </button>
-        </ion-list>
-        <ion-list>
-            <button ion-item (click)="openMenu()">
-                <span item-left>Salada</span>
-            </button>
-        </ion-list>
-    </ion-card>
-    <button fab danger fab-bottom fab-right (click)="deleteAll()">
-        <ion-icon name="md-trash"></ion-icon>
+    <ion-list>
+
+        <ion-item-sliding *ngFor="let item of items">
+
+            <ion-item>
+                {{item.title}}
+            </ion-item>
+
+            <ion-item-options>
+                <button (click)="editFavorite(item)" light>
+                    <ion-icon name="paper"></ion-icon>
+                </button>
+                <button (click)="deleteFavorite(item)" danger>
+                    <ion-icon name="trash"></ion-icon>
+                </button>
+            </ion-item-options>
+
+        </ion-item-sliding>
+
+    </ion-list>
+    <button fab danger fab-bottom fab-right (click)="addFavorite()">
+        <ion-icon name="add"></ion-icon>
     </button>
 </ion-content>

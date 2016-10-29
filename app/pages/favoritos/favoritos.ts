@@ -8,78 +8,76 @@ import {HomePage} from '../home/home';
 })
 
 export class FavoritosPage {
-    confirmMessage() {
-        const toast = Toast.create({
-            message: 'Item excluido!',
-            duration: 2000,
-            position: "bottom"
-        });
-        this.nav.present(toast);
+    items: any = [];
+
+    constructor(private nav: NavController) {
+
     }
 
-    deleteAll() {
-        let alert = Alert.create({
-            title: 'Excluir tudo?',
-            message: 'Nota: Esta ação não poderá ser revertida.',
-            buttons: [{
-                text: "Cancelar",
-            },
-            {
-                text: "Excluir",
-                handler: () => {
-                    alert.dismiss().then(()=>{
-                        this.confirmMessage();
-                    });
-                }
-            }]
-        });
-        this.nav.present(alert);
-    }
+    addFavorite(){
 
-    showConfirm() {
-        let alert = Alert.create({
-            title: 'Excluir?',
-            buttons: [{
-                text: "Cancelar",
-            },
-            {
-                text: "Excluir",
-                handler: () => {
-                    alert.dismiss().then(()=>{
-                        this.confirmMessage();
-                    });
-                }
-            }]
-        });
-        this.nav.present(alert);
-    }
-    constructor(public platform: Platform, public nav: NavController) { }
-    openMenu() {
-        let actionSheet = ActionSheet.create({
-            title: 'Opções',
-            cssClass: 'action-sheets-basic-page',
+        let prompt = Alert.create({
+            title: 'Adicionar item',
+            inputs: [{
+                name: 'title'
+            }],
             buttons: [
                 {
-                    text: 'Excluír',
-                    role: 'destructive',
-                    icon: !this.platform.is('ios') ? 'trash' : null,
-                    handler: () => {
-                        actionSheet.dismiss().then(()=>{
-                            this.showConfirm();
-                        });
-                    }
+                    text: 'Cancelar'
                 },
                 {
-                    text: 'Cancelar',
-                    role: 'cancel', // will always sort to be on the bottom
-                    icon: !this.platform.is('ios') ? 'close' : null,
-                    handler: () => {
-                        console.log('Cancel clicked');
+                    text: 'OK',
+                    handler: data => {
+                        this.items.push(data);
                     }
                 }
             ]
         });
 
-        this.nav.present(actionSheet);
+        this.nav.present(prompt);
+    }
+
+    editFavorite(item){
+
+        let prompt = Alert.create({
+            title: 'Editar',
+            inputs: [{
+                name: 'title'
+            }],
+            buttons: [
+                {
+                    text: 'Cancelar'
+                },
+                {
+                    text: 'Salvar',
+                    handler: data => {
+                        let index = this.items.indexOf(item);
+
+                        if(index > -1){
+                            this.items[index] = data;
+                        }
+                    }
+                }
+            ]
+        });
+
+        this.nav.present(prompt);
+
+    }
+
+    deleteFavorite(item){
+
+        const toast = Toast.create({
+            message: 'O ítem foi removido!',
+            duration: 2000,
+            position: "bottom"
+        });
+
+        let index = this.items.indexOf(item);
+
+        if(index > -1){
+            this.items.splice(index, 1);
+            this.nav.present(toast);
+        }
     }
 }

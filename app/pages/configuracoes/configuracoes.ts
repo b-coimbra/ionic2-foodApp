@@ -7,7 +7,6 @@ import {LoginPage} from '../login/login'
     templateUrl: 'build/pages/configuracoes/configuracoes.html'
 })
 
-
 @Page({
     templateUrl: 'build/pages/configuracoes/configuracoes.html'
 })
