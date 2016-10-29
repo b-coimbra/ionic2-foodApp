@@ -16,11 +16,12 @@
 
             <ion-item>
                 {{item.title}}
+                <ion-icon item-right name="ios-arrow-forward"></ion-icon>
             </ion-item>
 
             <ion-item-options>
                 <button (click)="editFavorite(item)" light>
-                    <ion-icon name="paper"></ion-icon>
+                    <ion-icon name="md-create"></ion-icon>
                 </button>
                 <button (click)="deleteFavorite(item)" danger>
                     <ion-icon name="trash"></ion-icon>

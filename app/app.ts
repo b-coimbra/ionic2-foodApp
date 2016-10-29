@@ -31,7 +31,7 @@ export class MyApp {
     slider = SliderPage;
     compra = PurchasePage;
 
-    rootPage: any = this.slider;
+    rootPage: any = this.home;
 
     constructor(platform: Platform) {
         platform.ready().then(() => {

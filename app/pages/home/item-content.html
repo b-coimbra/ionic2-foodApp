@@ -7,15 +7,17 @@
 </ion-header>
 
 <ion-content>
-      <ion-card class="cards-list-demo">
-      <ion-searchbar>
-
-      </ion-searchbar>
-        <ion-list>
-          <button ion-item (click)="purchase()">
-            <ion-icon name='ios-arrow-forward' item-right></ion-icon>
-            {{ item.title }}
-          </button>
-        </ion-list>
-      </ion-card>
+      <ion-card class="buy-list">
+        <img [src]="'img/' + item.image + '.png'" />
+        <ion-item padding>
+            <p><span class="title">{{ item.title }}</span>
+            </p>
+            <p class="price">Preço: ${{ item.price }}
+                <span class="quantity">x{{tap}}</span>
+            </p>
+            <button ion-button dark item-right round (tap)="tapEventRemove($event)" style="padding:1em"><ion-icon name="md-remove"></ion-icon></button>
+            <button ion-button danger item-right round (tap)="tapEvent($event)" style="padding:1em"><ion-icon name="md-add"></ion-icon></button>
+        </ion-item>
+        <button ion-button full danger round>Comprar</button>
+    </ion-card>
 </ion-content>

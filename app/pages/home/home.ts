@@ -15,13 +15,24 @@ class NavigationDetailsPage {
     constructor(params: NavParams) {
         this.item = params.data.item;
     }
+
+    public tap: number = 0;
+
+    tapEvent(e) {
+        this.tap++
+        this.item.price += this.item.price
+    }
+    tapEventRemove(e) {
+        this.tap--
+        this.item.price /=2
+    }
 }
 
 @Component({
     template: `
     <ion-list>
-    <button ion-item (click)="openFilters()">Filtros</button>
-    <button ion-item (click)="openConfig()">Configurações</button>
+    <button ion-item (click)="openFilters()">Filtros<ion-icon item-right name="md-restaurant"></ion-icon></button>
+    <button ion-item (click)="openConfig()">Configurações<ion-icon item-right name="md-settings"></ion-icon></button>
     </ion-list>
     `
 })
@@ -126,6 +137,7 @@ export class HomePage {
                 ],
                 'icon': 'ios-checkmark',
                 'quantity':'10',
+                'price':5,
                 'description': 'Selecione a loja em que deseja comprar um Hamburger.',
                 'image':'burger',
                 'color': '#28df4f'
@@ -135,6 +147,7 @@ export class HomePage {
                 'name':'de queijo',
                 'quantity':'7',
                 'icon': 'ios-close',
+                'price':22,
                 'description': 'Selecione a loja em que deseja comprar uma Pizza.',
                 'image':'pizza',
                 'color': '#f53d3d'
@@ -144,6 +157,7 @@ export class HomePage {
                 'name':'de macarrão',
                 'quantity':'15',
                 'icon': 'ios-close',
+                'price':7,
                 'description': 'Selecione a loja em que deseja comprar sua Salada.',
                 'image':'salad',
                 'color': '#f53d3d'
