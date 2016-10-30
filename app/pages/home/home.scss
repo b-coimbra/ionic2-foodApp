@@ -10,13 +10,62 @@
     float: left;
 }
 
+ion-card ion-card-header {
+    padding: 16px 16px 5px !important;
+    font-weight: 500;
+}
+
 .buy-list {
+    border-top: 3px solid #f53d3d;
     // display: inline;
+    .description {
+        position: absolute;
+        top: 0;
+        padding: 1em;
+        color: #fff;
+        z-index: 9;
+        text-align: justify;
+    }
+
+    &:hover {
+        .item-image {
+            height: 180px;
+            img {
+                top: -180px;
+            }
+
+            &:before {
+                background: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+
+    .item-image, img, .item-image:before {
+        transition: all .5s;
+    }
+
+    .item-image {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+
+        img {
+            top: -90px;
+            position: relative;
+        }
+
+        &:before {
+            content: '';
+            position: relative;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 1);
+            z-index: 9;
+        }
+    }
 
     .item {
-        border-top: 4px solid rgba(0, 0, 0, 0.22);
-        top: -65px;
-        margin-bottom: -70px;
         background-color: rgba(255, 255, 255, 0.75);
     }
 }

@@ -32,17 +32,30 @@ export class ConfiguracoesPage {
         let alert = Alert.create({
             title: 'Excluir conta?',
             message: 'Nota: você não poderá recuperar sua conta.',
-            buttons: [{
-                text: "Cancelar"
-            },
-            {
-                text: "Excluir",
-                handler: () => {
-                    setTimeout(() => {
-                        this.nav.setRoot(LoginPage);
-                    }, 500)
+            inputs: [
+                {
+                    name: 'senha',
+                    placeholder: 'Senha',
+                    type: 'password'
                 }
-            }]
+            ],
+            buttons: [
+                {
+                    text: 'Cancelar',
+                    role: 'cancel',
+                    handler: data => {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Excluir',
+                    handler: () => {
+                        setTimeout(() => {
+                            this.nav.setRoot(LoginPage);
+                        }, 500)
+                    }
+                }
+            ]
         });
         this.nav.present(alert);
     }

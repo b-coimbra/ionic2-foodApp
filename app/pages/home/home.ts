@@ -12,7 +12,7 @@ import {LoginPage} from '../login/login';
 class NavigationDetailsPage {
     item;
 
-    constructor(params: NavParams) {
+    constructor(params: NavParams, public nav: NavController) {
         this.item = params.data.item;
     }
 
@@ -25,6 +25,37 @@ class NavigationDetailsPage {
     tapEventRemove(e) {
         this.tap--
         this.item.price /=2
+    }
+
+    buyContent() {
+        let alert = Alert.create({
+            title: 'Comprar',
+            message: 'Selecione os meios de pagamento abaixo.',
+            inputs: [
+                {
+                    type: 'radio',
+                    label: 'Cartão',
+                    value: 'pay1',
+                    checked: true
+                }
+            ],
+            buttons: [
+                {
+                    text: 'Cancelar',
+                    role: 'cancel',
+                    handler: data => {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Comprar',
+                    handler: () => {
+                        
+                    }
+                }
+            ]
+        });
+        this.nav.present(alert);
     }
 }
 
@@ -137,8 +168,8 @@ export class HomePage {
                 ],
                 'icon': 'ios-checkmark',
                 'quantity':'10',
-                'price':5,
-                'description': 'Selecione a loja em que deseja comprar um Hamburger.',
+                'price':5.50,
+                'description': 'Hamburger feito de carne, etc etc.................... adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 'image':'burger',
                 'color': '#28df4f'
             },
@@ -148,7 +179,7 @@ export class HomePage {
                 'quantity':'7',
                 'icon': 'ios-close',
                 'price':22,
-                'description': 'Selecione a loja em que deseja comprar uma Pizza.',
+                'description': 'Pizza de calabresa e catupiri, feita com etc etc etc.......sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
                 'image':'pizza',
                 'color': '#f53d3d'
             },
@@ -158,7 +189,7 @@ export class HomePage {
                 'quantity':'15',
                 'icon': 'ios-close',
                 'price':7,
-                'description': 'Selecione a loja em que deseja comprar sua Salada.',
+                'description': 'Salada de verduras, com alface, tomate etc etc.....ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci',
                 'image':'salad',
                 'color': '#f53d3d'
             }

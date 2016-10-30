@@ -6,6 +6,7 @@ import {FORM_DIRECTIVES, FormBuilder,  ControlGroup, Validators, AbstractControl
 import {CustomValidators} from '../validators/customvalidators';
 import {FacebookLogin} from '../../util/facebook-login';
 import {Fire} from '../../util/fire';
+import {MenuController} from 'ionic-angular';
 
 @Page({
     templateUrl: 'build/pages/login/login.html',
@@ -18,7 +19,8 @@ export class LoginPage {
     password: AbstractControl;
 
     home: string = "home";
-    constructor(public nav: NavController, private navController: NavController, private fb: FormBuilder, private fire: Fire) {
+    constructor(public nav: NavController, private navController: NavController, private fb: FormBuilder, private fire: Fire, public menuCtrl: MenuController) {
+        this.menuCtrl.enable(false);
         this.authForm = fb.group({
             'username': ['', Validators.compose([Validators.required, Validators.minLength(3), CustomValidators.checkFirstCharacterValidator])],
             'password': ['', Validators.compose([Validators.required, Validators.minLength(8), CustomValidators.checkFirstCharacterValidator])]
@@ -32,6 +34,7 @@ export class LoginPage {
         if(this.authForm.valid) {
             console.log('Valores enviados: ', value);
         }
+        this.menuCtrl.enable(true);
     }
 
     onLogin() {

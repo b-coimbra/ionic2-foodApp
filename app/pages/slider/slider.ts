@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
 import { MenuController, NavController } from 'ionic-angular';
-
 import {HomePage} from '../home/home';
 import {LoginPage} from '../login/login'
 
@@ -47,13 +45,11 @@ export class SliderPage {
     }
 
     ionViewDidEnter() {
-        // the root left menu should be disabled on the tutorial page
         this.menu.enable(false);
     }
 
     ionViewWillLeave() {
-        // enable the root left menu when leaving the tutorial page
-        this.menu.enable(true);
+        this.menu.enable(false);
     }
 
 }

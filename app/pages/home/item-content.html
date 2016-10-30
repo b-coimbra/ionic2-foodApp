@@ -7,17 +7,30 @@
 </ion-header>
 
 <ion-content>
-      <ion-card class="buy-list">
-        <img [src]="'img/' + item.image + '.png'" />
+    <ion-card class="buy-list">
+        <div class="item-image">
+            <p class="description">{{item.description}}</p>
+            <img [src]="'img/' + item.image + '.png'" />
+        </div>
+        <ion-card-header>
+            {{item.title}}
+        </ion-card-header>
         <ion-item padding>
-            <p><span class="title">{{ item.title }}</span>
-            </p>
-            <p class="price">Preço: ${{ item.price }}
-                <span class="quantity">x{{tap}}</span>
-            </p>
+            <button ion-button item-left outline danger>
+                <span class="button-inner">${{item.price}}</span>
+            </button>
+            <div item-left>
+                <span class="button-inner" item>x{{tap}}</span>
+            </div>
             <button ion-button dark item-right round (tap)="tapEventRemove($event)" style="padding:1em"><ion-icon name="md-remove"></ion-icon></button>
             <button ion-button danger item-right round (tap)="tapEvent($event)" style="padding:1em"><ion-icon name="md-add"></ion-icon></button>
         </ion-item>
-        <button ion-button full danger round>Comprar</button>
     </ion-card>
 </ion-content>
+
+<ion-footer>
+    <button ion-button danger full large icon-left (click)="buyContent()">
+        <ion-icon name="md-cart"></ion-icon>
+        Comprar
+    </button>
+</ion-footer>
