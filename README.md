@@ -16,5 +16,6 @@ To use this app, you'll need the following things installed on your machine:
 
 ![alt tag](http://i.imgur.com/Tqj9LTj.png)
 ![alt tag](http://i.imgur.com/pabdSbv.png)![alt tag](http://i.imgur.com/3Nqhdxr.png)
-![alt tag](http://i.imgur.com/ojvTXPi.png)![alt tag](http://i.imgur.com/DOyfoi0.png)
-![alt tag](http://i.imgur.com/xhSdt1j.png)![alt tag](http://i.imgur.com/s97iSZ7.png)
+![alt tag](http://i.imgur.com/ojvTXPi.png)![alt tag](http://i.imgur.com/uEKrFOv.png)
+![alt tag](http://i.imgur.com/DOyfoi0.png)![alt tag](http://i.imgur.com/xhSdt1j.png)
+![alt tag](http://i.imgur.com/s97iSZ7.png)
