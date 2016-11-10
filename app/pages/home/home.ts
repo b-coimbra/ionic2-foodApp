@@ -4,6 +4,7 @@ import {Page} from 'ionic-angular';
 import {SearchPage} from '../search/search';
 import {ConfiguracoesPage} from '../configuracoes/configuracoes';
 import {LoginPage} from '../login/login';
+import {LUGARES} from '../../util/lugares';
 
 @Component({
     templateUrl: 'build/pages/home/item-content.html'
@@ -50,7 +51,7 @@ class NavigationDetailsPage {
                 {
                     text: 'Comprar',
                     handler: () => {
-                        
+
                     }
                 }
             ]
@@ -73,8 +74,8 @@ class PopoverPage {
     SaveChanges(){
         const toast = Toast.create({
             message: 'Filtos atualizados.',
-            position: "top",
-            duration: 2000,
+            position: "middle",
+            duration: 1000,
         });
         this.navCtrl.present(toast);
     }
@@ -155,6 +156,7 @@ export class HomePage {
 
     home: string = "home";
     username;
+    burger = [];
 
     constructor(public nav: NavController) {
         this.nav = nav;
@@ -162,12 +164,11 @@ export class HomePage {
         this.items = [
             {
                 'title': 'Hamburger',
-                names: [
-                    {name:'de carne'},
-                    {name:'de frango'}
-                ],
+                'name1':'de frango',
+                'name2':'de carne',
+                'name3':'de soja',
                 'icon': 'ios-checkmark',
-                'quantity':'10',
+                'quantity':'3',
                 'price':5.50,
                 'description': 'Hamburger feito de carne, etc etc.................... adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 'image':'burger',
@@ -175,8 +176,11 @@ export class HomePage {
             },
             {
                 'title': 'Pizza',
+                'name1':'de calabresa',
+                'name2':'de presunto',
+                'name3':'americana',
                 'name':'de queijo',
-                'quantity':'7',
+                'quantity':'3',
                 'icon': 'ios-close',
                 'price':22,
                 'description': 'Pizza de calabresa e catupiri, feita com etc etc etc.......sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
@@ -185,8 +189,10 @@ export class HomePage {
             },
             {
                 'title': 'Salada',
-                'name':'de macarrão',
-                'quantity':'15',
+                'name1':'de folhas verdes',
+                'name2':'com camarão',
+                'name3':'de repolho roxo',
+                'quantity':'3',
                 'icon': 'ios-close',
                 'price':7,
                 'description': 'Salada de verduras, com alface, tomate etc etc.....ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci',

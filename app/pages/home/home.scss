@@ -17,7 +17,22 @@ ion-card ion-card-header {
 
 .buy-list {
     border-top: 3px solid #f53d3d;
+    transition: all .3s;
     // display: inline;
+
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     display: block;
+    //     top: 10px;
+    //     right: calc(50% - 15px);
+    //     border-right: 15px solid transparent;
+    //     border-top: 10px solid #f00;
+    //     border-left: 15px solid transparent;
+    //     z-index: 9;
+    //     transition: all .3s;
+    // }
+
     .description {
         position: absolute;
         top: 0;
@@ -28,6 +43,13 @@ ion-card ion-card-header {
     }
 
     &:hover {
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #f53d3d;
+
+        &:after {
+            border-top: 10px solid #fff;
+        }
+
         .item-image {
             height: 180px;
             img {

@@ -27,8 +27,8 @@
 
 <ion-content class="card-background-page">
     <div [ngSwitch]="home">
-        <ion-list *ngSwitchWhen="'home'" class="home">
-            <ion-list *ngFor="#item of items" (click)="openNavDetailsPage(item)">
+        <ion-list *ngSwitchCase="'home'" class="home">
+            <ion-list *ngFor="let item of items" (click)="openNavDetailsPage(item)">
                 <ion-card class="home-cards">
                     <img [src]="'img/' + item.image + '.png'" class="item-image" />
                     <div class="card-title">{{ item.title }}</div>
@@ -36,7 +36,7 @@
                 </ion-card>
             </ion-list>
         </ion-list>
-        <ion-list *ngSwitchWhen="'pedidos'" class="pedidos">
+        <ion-list *ngSwitchCase="'pedidos'" class="pedidos">
             <ion-list>
                 <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)">
                     <ion-icon [name]="item.icon" [ngStyle]="{'color': item.color}" item-left></ion-icon>

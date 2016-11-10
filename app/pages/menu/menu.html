@@ -1,0 +1,21 @@
+<!--
+  Generated template for the MenuPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar primary *navbar>
+  <ion-title>Menu</ion-title>
+</ion-navbar>
+
+<ion-content class="menu">
+
+  <ion-item-group *ngFor="let category of place.menu">
+
+    <ion-item-divider bgColor class="strong uppercase">{{ category.name }}</ion-item-divider>
+    <ion-item *ngFor="let item of category.items">
+      <span>{{ item.name }}</span>
+      <span class="pull-right">{{ item.price | currency:'USD':true }}</span>
+    </ion-item>
+  </ion-item-group>
+</ion-content>

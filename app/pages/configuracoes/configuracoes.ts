@@ -23,6 +23,7 @@ export class ConfiguracoesPage {
             message: 'Suas configurações foram salvas',
             showCloseButton: true,
             closeButtonText: 'Ok',
+            duration: 1000,
             position: "bottom"
         });
         this.nav.present(toast);

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuController, NavController } from 'ionic-angular';
+import { MenuController, NavController, Alert } from 'ionic-angular';
 import {HomePage} from '../home/home';
 import {LoginPage} from '../login/login'
 
@@ -37,8 +37,19 @@ export class SliderPage {
     }
 
     startApp() {
-        this.navCtrl.setRoot(LoginPage);
+        try {
+            this.navCtrl.setRoot(LoginPage);
+        } catch(err) {
+            err.message = alert("Erro em estabelecer conexão com a internet.");
+        }
     }
+
+    // error() {
+    //     const alert = Alert.create({
+    //         title: 'Conexão com a internet faliu.'
+    //     })
+    //     this.navCtrl.present(alert);
+    // }
 
     onSlideChangeStart(slider) {
         this.showSkip = !slider.isEnd;

@@ -13,11 +13,49 @@
             <img [src]="'img/' + item.image + '.png'" />
         </div>
         <ion-card-header>
-            {{item.title}}
+            {{item.title}} {{item.name1}}
         </ion-card-header>
         <ion-item padding>
             <button ion-button item-left outline danger>
                 <span class="button-inner">${{item.price}}</span>
+            </button>
+            <div item-left>
+                <span class="button-inner" item>x{{tap}}</span>
+            </div>
+            <button ion-button dark item-right round (tap)="tapEventRemove($event)" style="padding:1em"><ion-icon name="md-remove"></ion-icon></button>
+            <button ion-button danger item-right round (tap)="tapEvent($event)" style="padding:1em"><ion-icon name="md-add"></ion-icon></button>
+        </ion-item>
+    </ion-card>
+    <ion-card class="buy-list">
+        <div class="item-image">
+            <p class="description">{{item.description}}</p>
+            <img [src]="'img/' + item.image + '.png'" />
+        </div>
+        <ion-card-header>
+            {{item.title}} {{item.name2}}
+        </ion-card-header>
+        <ion-item padding>
+            <button ion-button item-left outline danger>
+                <span class="button-inner">$7.3</span>
+            </button>
+            <div item-left>
+                <span class="button-inner" item>x{{tap}}</span>
+            </div>
+            <button ion-button dark item-right round (tap)="tapEventRemove($event)" style="padding:1em"><ion-icon name="md-remove"></ion-icon></button>
+            <button ion-button danger item-right round (tap)="tapEvent($event)" style="padding:1em"><ion-icon name="md-add"></ion-icon></button>
+        </ion-item>
+    </ion-card>
+    <ion-card class="buy-list">
+        <div class="item-image">
+            <p class="description">{{item.description}}</p>
+            <img [src]="'img/' + item.image + '.png'" />
+        </div>
+        <ion-card-header>
+            {{item.title}} {{item.name3}}
+        </ion-card-header>
+        <ion-item padding>
+            <button ion-button item-left outline danger>
+                <span class="button-inner">$3.5</span>
             </button>
             <div item-left>
                 <span class="button-inner" item>x{{tap}}</span>
