@@ -1,0 +1,57 @@
+<ion-header>
+
+    <ion-navbar danger>
+        <ion-title>restaurantes</ion-title>
+        <button menuToggle>
+            <ion-icon name="md-menu"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="places common-bg">
+    <ion-card *ngFor="let place of places" (click)="viewPlace(place.id)">
+        <ion-card-header>
+            <!-- title -->
+            <div>
+                <span class="strong">{{ place.name }}</span>
+                <span class="rating pull-right">{{ place.rating }}</span>
+            </div>
+
+            <!--sub title-->
+            <div class="uppercase text-sm secondary">
+                {{ place.district }}, {{ place.city }}
+            </div>
+
+            <!-- extra info -->
+            <div class="text-sm secondary" padding-bottom>
+                {{ place.num_reviews }} Comentários &bull;
+                {{ place.num_bookmarks }} Favoritos &bull;
+                {{ place.num_check_in }} Visitas
+            </div>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col width-33 class="secondary">Culinária</ion-col>
+                    <ion-col width-66>{{ place.cuisines }}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col width-33 class="secondary">Preço</ion-col>
+                    <ion-col width-66>{{ place.cost }}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col width-33 class="secondary">Horário</ion-col>
+                    <ion-col width-66><span class="text-sm uppercase" style="font-weight:500;">Segunda - Sexta</span>, <span class="text-sm">8h às 16h</span></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col width-25 *ngFor="let photo of limitArray(place.photos, 4)" class="food-img">
+                        <img class="round" src="{{ photo.thumb }}" alt="">
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

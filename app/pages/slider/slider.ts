@@ -30,7 +30,7 @@ export class SliderPage {
             },
             {
                 title: 'Como usar?',
-                description: 'Cadastre-se e simplesmente navegue pelas categorias listadas na página principal, e escolha seu prato. Logo após, selecione o ícone de compra, e selecione o estabelecimento e  método de pagamento. Por último, espere seu pedido ser conferido pelo estabelecimento escolhido.',
+                description: 'Cadastre-se e navegue pela lista de restaurantes, escolha seu prato e método de pagamento. Então espere seu pedido ser confirmado pelo estabelecimento escolhido.',
                 image: 'img/question.png',
             }
         ];

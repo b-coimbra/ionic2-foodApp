@@ -1,0 +1,55 @@
+.places {
+    ion-card {
+
+        ion-card-header {
+
+            padding-bottom: 0;
+
+            & > div {
+                margin-bottom: 5px;
+            }
+
+            & > div:last-child {
+                border-bottom: 1px solid #ababab;
+            }
+        }
+    }
+}
+
+.food-img img {
+    border-radius: 5px;
+}
+
+.text-sm {
+    font-size: 0.8em;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.secondary {
+    color: #8D8D8D;
+}
+
+.rating, .item-rating {
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 2px;
+    color: #fff;
+    background: #69BB7B;
+    float: right;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.block-footer {
+    border-top:1px solid #f7f7f7;
+    background: #FDFBFD;
+}
+
+img.round {
+    border-radius: 5px;
+}

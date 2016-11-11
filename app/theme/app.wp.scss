@@ -29,3 +29,15 @@
 // App Windows Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the Windows app
+
+.text-input, .datetime-text {
+    border: none;
+}
+
+.toolbar ion-segment {
+    justify-content: center;
+}
+
+ion-label[stacked], ion-label[floating] {
+    transition: all .3s;
+}

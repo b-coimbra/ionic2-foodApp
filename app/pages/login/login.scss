@@ -91,3 +91,7 @@ ion-list {
 ion-item.item.item-datetime {
     padding: 0;
 }
+
+.picker-button, .picker-button.activated, .picker-prefix, .picker-suffix, .picker-opt-selected {
+    color: #ef473a;
+}

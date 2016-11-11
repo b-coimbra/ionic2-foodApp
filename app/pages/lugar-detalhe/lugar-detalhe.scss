@@ -1,0 +1,58 @@
+
+.bg-image {
+    background: url("../../img/menu/r1.jpg") center no-repeat / cover;
+}
+
+.place-detail .bg-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.rating {
+    font-size: 1.2em;
+    padding: 4px 8px;
+    margin-bottom: 5px;
+}
+
+.line {
+    width: 100%;
+    border-top: 1px solid #8D8D8D;
+}
+
+.btn-round {
+    display: inline-block;
+    padding: 10px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 2em;
+}
+
+ion-icon.ion-md-bookmark {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #CB202D;
+}
+
+.review-note {
+    padding: 0.25em 0.5em;
+    border-radius: 3px;
+    color: #fff;
+    background: #69BB7B;
+}

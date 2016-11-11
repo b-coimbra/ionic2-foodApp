@@ -13,6 +13,8 @@ import {SobrePage} from './pages/sobre/sobre';
 import {SearchPage} from './pages/search/search';
 import {SliderPage} from './pages/slider/slider';
 import {PurchasePage} from './pages/purchase/purchase';
+import {RestaurantesPage} from './pages/restaurantes/restaurantes'
+import {LugarDetalhePage} from './pages/lugar-detalhe/lugar-detalhe';
 import {Fire} from './util/fire';
 
 @Component({
@@ -30,8 +32,10 @@ export class MyApp {
     pesquisa = SearchPage;
     slider = SliderPage;
     compra = PurchasePage;
+    restaurantes = RestaurantesPage;
+    lugardetalhe = LugarDetalhePage;
 
-    rootPage: any = this.home;
+    rootPage: any = this.slider;
 
     constructor(platform: Platform) {
         platform.ready().then(() => {

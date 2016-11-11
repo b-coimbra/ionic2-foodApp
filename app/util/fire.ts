@@ -14,7 +14,13 @@ export class Fire {
             storageBucket: "mrfood-e4756.appspot.com",
         };
 
-        firebase.initializeApp(config);
+         // This will bypass the slider screen, even if there's no connection.
+        try {
+            firebase.initializeApp(config);
+        } catch(e) {
+            e
+        } finally {
+        }
     }
 
     login(token: string, successCallback, errorCallback) {

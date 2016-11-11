@@ -14,12 +14,18 @@
 @import "../pages/historico/historico";
 @import "../pages/slider/slider";
 @import "../pages/sobre/sobre";
+@import "../pages/restaurantes/restaurantes";
+@import "../pages/lugar-detalhe/lugar-detalhe";
 
 .toolbar-title {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
     font-size: 1.4rem;
     text-transform: uppercase;
+}
+
+.item h2 {
+    color: #000;
 }
 
 .swiper-pagination-bullet {
@@ -53,6 +59,7 @@ ion-label {
     font: 800 1.3rem 'Roboto', sans-serif;
     color: #4e4e4e;
 }
+
 
 .item > ion-icon    , .item-inner > ion-icon {
     font-size: 3rem;

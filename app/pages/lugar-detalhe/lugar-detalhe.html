@@ -1,0 +1,164 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Detalhes</ion-title>
+        <ion-buttons start right>
+            <button [navPush]="searchPage">
+                <ion-icon name="md-search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="place-detail common-bg rlt">
+
+    <div class="bg-image">
+
+        <div class="bg-overlay" padding>
+            <div>
+                <div class="pull-left">
+                    <h3>Pizzaria Di Nápoli</h3>
+                    <span>Vila Santa Cruz</span>
+                </div>
+
+                <div class="pull-right" text-right>
+                    <div class="rating">4.5</div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+            <div margin-top>
+                <ion-badge favorite>ABERTO</ion-badge>
+                das 7h as 16h
+                <div>
+                    3 Comentários &bull;
+                    5 Fotos
+                </div>
+            </div>
+            <div margin-top>
+                <ion-icon name="card"></ion-icon>
+                <span>Dinheiro & Cartão aceitos</span>
+            </div>
+
+            <!-- <div class="strong" margin-top>Status</div> -->
+            <div>
+                <ion-icon name="checkmark-circle" favorite></ion-icon>
+                Delivery Disponível
+            </div>
+
+            <div class="line" margin-top margin-bottom></div>
+            <div margin-bottom>
+                <a href="tel:33824029" class="btn-round">
+                    <ion-icon name="call" favorite></ion-icon>
+                </a>
+                <div class="btn-round" (click)="addBookMark(place)">
+                    <ion-icon name="bookmark" primary></ion-icon>
+                </div>
+                <div class="btn-round" (click)="goToMap()">
+                    <ion-icon name="pin"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--address-->
+    <div padding class="light-bg">
+        <div class="strong">Endereço</div>
+        <span>Av. Padre Nelson Antonio Romão, 416 - Vila Santa Cruz</span>
+
+        <p>
+            <a href="http://www.mrfood.com">
+                Website
+                <ion-icon ios="ios-exit" md="md-exit"></ion-icon>
+            </a>
+        </p>
+    </div>
+    <div class="block-footer" padding text-right (click)="goToMap()">
+        <span style="color:#CB202D;">Mapa</span>
+        <ion-icon danger name="arrow-forward"></ion-icon>
+    </div>
+
+    <!-- menu -->
+    <div padding class="light-bg margin-top-20">
+        <div class="strong" style="font-weight:600;">CARDÁPIO PRINCIPAL</div>
+        <div class="menu-title">
+        </div>
+        <div class="food-list">
+            <span>Pizza Italiana</span>
+            <span class="pull-right">23.30$</span><br>
+            <span>Pizza 4 Queijos</span>
+            <span class="pull-right">20.50$</span><br>
+            <span>Pizza Napolitana</span>
+            <span class="pull-right">25.80$</span>
+        </div>
+    </div>
+    <div class="block-footer" padding text-right (click)="goToMenu()">
+        <span danger>Cardápio</span>
+        <ion-icon danger name="arrow-forward"></ion-icon>
+    </div>
+
+    <!-- photos -->
+    <div padding class="light-bg margin-top-20">
+        <div class="strong">Fotos</div>
+
+        <ion-grid class="grid-no-padding">
+            <ion-row>
+                <ion-col width-25>
+                    <img class="round" src="img/menu/r3_thumb.jpg" alt="">
+                </ion-col>
+                <ion-col width-25>
+                    <img class="round" src="img/menu/r2_thumb.jpg" alt="">
+                </ion-col>
+                <ion-col width-25>
+                    <img class="round" src="img/menu/r4_thumb.jpg" alt="">
+                </ion-col>
+                <ion-col width-25>
+                    <img class="round" src="img/menu/r5_thumb.jpg" alt="">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <button favorite block>
+            Adicionar foto
+        </button>
+    </div>
+    <div class="block-footer" padding text-right (click)="goToPhotos()">
+        <span danger>Veja as fotos</span>
+        <ion-icon danger name="arrow-forward"></ion-icon>
+    </div>
+
+    <!-- Reviews -->
+    <div padding class="light-bg margin-top-20">
+        <div class="strong">Comentários</div>
+        <div margin-top class="secondary">COMENTÁRIOS RECENTES</div>
+        <ion-list class="list-no-border">
+            <ion-item text-wrap>
+                <ion-avatar item-left>
+                    <img src="img/reviews/h.jpg" alt="">
+                </ion-avatar>
+                <div class="strong">Henrique Bortolani</div>
+                <div class="text-sm">
+                    <span class="strong review-note">5.0</span>
+                    Sabemos que há muito a ser feito, contudo, estamos bastante empolgados com o próximo update. Sem dúvidas, este é o melhor serviço de entrega.
+                </div>
+            </ion-item>
+            <ion-item text-wrap>
+                <ion-avatar item-left>
+                    <img src="img/reviews/e.jpg" alt="">
+                </ion-avatar>
+                <div class="strong">Eduardo Biava</div>
+                <div class="text-sm">
+                    <span class="strong review-note">5.0</span>
+                    Aplicativo em fase de testes, colhetamos os melhores serviços de entrega da cidade.
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+    <div class="block-footer" padding text-right (click)="goToReviews()">
+        <span danger>Todos os comentários (3)</span>
+        <ion-icon danger name="arrow-forward"></ion-icon>
+    </div>
+
+</ion-content>
