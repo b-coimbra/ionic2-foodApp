@@ -1,13 +1,11 @@
 .bg {
     height: 100%;
     width: 100%;
-    margin-top: -6px;
+    overflow: hidden;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%) !important;
 }
 p,h2 {color: #fff;}
-ion-page.show-page scroll-content {
-    overflow: hidden;
-}
+
 
 .tutorial-page {
     .toolbar-background {
