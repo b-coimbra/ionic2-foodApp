@@ -35,7 +35,7 @@ export class MyApp {
     restaurantes = RestaurantesPage;
     lugardetalhe = LugarDetalhePage;
 
-    rootPage: any = this.slider;
+    rootPage: any = this.sobre;
 
     constructor(platform: Platform) {
         platform.ready().then(() => {

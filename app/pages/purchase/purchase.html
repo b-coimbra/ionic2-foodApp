@@ -1,32 +1,75 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Descrição
-    </ion-title>
-    <ion-buttons start>
-      <button ion-button (click)="dismiss()">
-        <span color="primary" showWhen="ios">Cancelar</span>
-        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Compra</ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()" item-right style="margin-right:15px">
+                <span color="primary" showWhen="ios">Cancelar</span>
+                <ion-icon name="md-close" hideWhen="ios"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-      <ion-item>
-        <ion-avatar item-left>
-          <img src="{{character.image}}">
-        </ion-avatar>
-        <h2>{{character.name}}</h2>
-        <p>{{character.quote}}</p>
-      </ion-item>
-
-      <ion-item *ngFor="let item of character['items']">
-        {{item.title}}
-        <ion-note item-right>
-          {{item.note}}
-        </ion-note>
-      </ion-item>
-  </ion-list>
+    <ion-item-group>
+        <ion-item-divider light>
+            Item(s) selecionados:
+            <ion-icon name="md-checkmark" item-left></ion-icon>
+        </ion-item-divider>
+        <ion-item>
+            Hamburger de carne
+            <button outline secondary item-right>
+                5.50
+            </button>
+        </ion-item>
+        <ion-item>
+            Hamburger de soja
+            <button outline secondary item-right>
+                5.50
+            </button>
+        </ion-item>
+    </ion-item-group>
+    <ion-list>
+        <ion-item-divider light>
+            Opções de compra:
+            <ion-icon name="logo-usd" item-left></ion-icon>
+        </ion-item-divider>
+        <ion-item>
+            <ion-label>Método de pagamento</ion-label>
+            <ion-icon name="ios-card" item-left></ion-icon>
+            <ion-select [(ngModel)]="payment">
+                <ion-option value="cartao">Cartão</ion-option>
+                <ion-option value="dinheiro">Dinheiro</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Estabelecimento</ion-label>
+            <ion-icon name="md-restaurant" item-left></ion-icon>
+            <ion-select [(ngModel)]="place">
+                <ion-option value="restaurant1">Restaurante Lopes</ion-option>
+                <ion-option value="restaurant1">Pizzaria Di Napoli</ion-option>
+                <ion-option value="restaurant1">Spot Burger</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Delivery</ion-label>
+            <ion-icon name="md-bicycle" item-left></ion-icon>
+            <ion-toggle checked="true" danger></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>Quantidade:</ion-label>
+            <button ion-button dark item-right (tap)="tapEventRemove($event)" style="padding:1em" class="c-btn"><ion-icon name="md-remove"></ion-icon></button>
+            <button ion-button danger item-right (tap)="tapEvent($event)" style="padding:1em" class="c-btn"><ion-icon name="md-add"></ion-icon></button>
+            <button outline danger item-right>
+                <span class="button-inner">x{{tap}}</span>
+            </button>
+        </ion-item>
+        <ion-item>
+            <ion-label>TOTAL:</ion-label>
+            <span item-right danger>$11.00</span>
+        </ion-item>
+    </ion-list>
+    <div padding>
+        <button ion-button dark round block (click)="comprar()">Comprar</button>
+    </div>
 </ion-content>

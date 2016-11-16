@@ -41,6 +41,8 @@
                 <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)">
                     <ion-icon [name]="item.icon" [ngStyle]="{'color': item.color}" item-left></ion-icon>
                     {{ item.title }}
+                    <span item-right danger>{{item.time}}</span>
+                    <ion-icon name="md-time" danger item-right></ion-icon>
                 </button>
             </ion-list>
         </ion-list>

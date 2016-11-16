@@ -10,6 +10,13 @@
     float: left;
 }
 
+.button-icon-only {
+    z-index: 999;
+    &:hover {
+        color: #000 !important;
+    }
+}
+
 ion-card ion-card-header {
     padding: 16px 16px 5px !important;
     font-weight: 500;

@@ -5,6 +5,7 @@ import {SearchPage} from '../search/search';
 import {ConfiguracoesPage} from '../configuracoes/configuracoes';
 import {LoginPage} from '../login/login';
 import {LUGARES} from '../../util/lugares';
+import {PurchasePage} from '../purchase/purchase';
 
 @Component({
     templateUrl: 'build/pages/home/item-content.html'
@@ -13,7 +14,7 @@ import {LUGARES} from '../../util/lugares';
 class NavigationDetailsPage {
     item;
 
-    constructor(params: NavParams, public nav: NavController) {
+    constructor(params: NavParams, public nav: NavController, public viewCtrl: ViewController) {
         this.item = params.data.item;
     }
 
@@ -26,6 +27,12 @@ class NavigationDetailsPage {
     tapEventRemove(e) {
         this.tap--
         this.item.price /=2
+    }
+
+    buyPage() {
+        this.viewCtrl.dismiss().then(()=>{
+            this.nav.push(PurchasePage);
+        });
     }
 
     buyContent() {
@@ -169,8 +176,9 @@ export class HomePage {
                 'name3':'de soja',
                 'icon': 'ios-checkmark',
                 'quantity':'3',
+                'time':'30min',
                 'price':5.50,
-                'description': 'Hamburger feito de carne, etc etc.................... adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                'description': 'Hamburger feito de carne, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 'image':'burger',
                 'color': '#28df4f'
             },
@@ -180,10 +188,11 @@ export class HomePage {
                 'name2':'de presunto',
                 'name3':'americana',
                 'name':'de queijo',
+                'time':'15min',
                 'quantity':'3',
                 'icon': 'ios-close',
-                'price':22,
-                'description': 'Pizza de calabresa e catupiri, feita com etc etc etc.......sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+                'price':22.00,
+                'description': 'Pizza de calabresa e catupiri, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
                 'image':'pizza',
                 'color': '#f53d3d'
             },
@@ -191,11 +200,12 @@ export class HomePage {
                 'title': 'Salada',
                 'name1':'de folhas verdes',
                 'name2':'com camarão',
+                'time':'35min',
                 'name3':'de repolho roxo',
                 'quantity':'3',
                 'icon': 'ios-close',
-                'price':7,
-                'description': 'Salada de verduras, com alface, tomate etc etc.....ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci',
+                'price':7.00,
+                'description': 'Salada de verduras, com alface, tomate etc, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci',
                 'image':'salad',
                 'color': '#f53d3d'
             }
