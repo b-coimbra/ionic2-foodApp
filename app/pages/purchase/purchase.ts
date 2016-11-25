@@ -8,6 +8,7 @@ import {Modal, Platform, NavParams, ViewController, Alert, NavController, Loadin
 
 export class PurchasePage {
     item;
+
     constructor(public viewCtrl: ViewController, public params: NavParams, public nav: NavController) {
     }
 
@@ -60,8 +61,8 @@ export class PurchasePage {
             message: 'Seu pedido foi realizado. Você receberá uma notificação quando a compra for confirmada.',
             showCloseButton: true,
             closeButtonText: 'Ok',
-            duration: 4000,
-            position: "bottom"
+            duration: 4500,
+            position: "top"
         });
 
         this.nav.present(toast);

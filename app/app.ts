@@ -15,6 +15,8 @@ import {SliderPage} from './pages/slider/slider';
 import {PurchasePage} from './pages/purchase/purchase';
 import {RestaurantesPage} from './pages/restaurantes/restaurantes'
 import {LugarDetalhePage} from './pages/lugar-detalhe/lugar-detalhe';
+import {TermosPage} from './pages/termos/termos';
+import {FotosPage} from './pages/fotos/fotos';
 import {Fire} from './util/fire';
 
 @Component({
@@ -32,10 +34,12 @@ export class MyApp {
     pesquisa = SearchPage;
     slider = SliderPage;
     compra = PurchasePage;
+    termos: TermosPage;
+    fotos = FotosPage;
     restaurantes = RestaurantesPage;
     lugardetalhe = LugarDetalhePage;
 
-    rootPage: any = this.sobre;
+    rootPage: any = this.slider;
 
     constructor(platform: Platform) {
         platform.ready().then(() => {

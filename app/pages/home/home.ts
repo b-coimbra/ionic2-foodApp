@@ -11,7 +11,7 @@ import {PurchasePage} from '../purchase/purchase';
     templateUrl: 'build/pages/home/item-content.html'
 })
 
-class NavigationDetailsPage {
+export class NavigationDetailsPage {
     item;
 
     constructor(params: NavParams, public nav: NavController, public viewCtrl: ViewController) {

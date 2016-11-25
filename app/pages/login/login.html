@@ -84,7 +84,11 @@
                     <ion-item>
                         <ion-icon name="md-calendar" item-left></ion-icon>
                         <ion-label>Data de nascimento</ion-label>
-                        <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="myDate">
+                        <ion-datetime displayFormat="DD/MMM/YYYY" min="1920" [(ngModel)]="myDate"
+                            monthNames="janeiro, fevereiro, mar\u00e7o, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro"
+                            monthShortNames="jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez"
+                            dayNames="domingo, segunda-feira, ter\u00e7a-feira, quarta-feira, quinta-feira, sexta-feira, sabado"
+                            dayShortNames="dom, seg, ter, qua, qui, sexta, sabado">
                             <span class="button-inner">OK</span>
                             <span class="button-inner">Cancelar</span>
                         </ion-datetime>

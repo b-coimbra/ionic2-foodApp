@@ -94,7 +94,7 @@
             <span class="pull-right">25.80$</span>
         </div>
     </div>
-    <div class="block-footer" padding text-right (click)="goToMenu()">
+    <div class="block-footer" padding text-right (click)="cardapio()">
         <span danger>Cardápio</span>
         <ion-icon danger name="arrow-forward"></ion-icon>
     </div>
@@ -120,13 +120,9 @@
             </ion-row>
         </ion-grid>
 
-        <button favorite block>
-            Adicionar foto
+        <button favorite block (click)="verFotos()">
+            Ver fotos
         </button>
-    </div>
-    <div class="block-footer" padding text-right (click)="goToPhotos()">
-        <span danger>Veja as fotos</span>
-        <ion-icon danger name="arrow-forward"></ion-icon>
     </div>
 
     <!-- Reviews -->
@@ -151,7 +147,7 @@
                 <div class="strong">Eduardo Biava</div>
                 <div class="text-sm">
                     <span class="strong review-note">5.0</span>
-                    Aplicativo em fase de testes, colhetamos os melhores serviços de entrega da cidade.
+                    Aplicativo em fase de testes, coletamos os melhores serviços de entrega da cidade.
                 </div>
             </ion-item>
         </ion-list>
