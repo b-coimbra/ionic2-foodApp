@@ -1,6 +1,6 @@
 # Food Delivery
 
-Academic project in progress.
+This project is no longer being maintained.
 
 ## Requirements
 To use this app, you'll need the following things installed on your machine:
