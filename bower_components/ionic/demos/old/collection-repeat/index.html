@@ -1,13 +1,13 @@
 <html ng-app="contactsApp">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
 
   <title>Collection-Repeat: Early Preview</title>
 
-  <link href="http://code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+  <link href="http://code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet"/>
   <script src="http://code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
-  <link href="style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet"/>
   <script src="script.js"></script>
   <script src="contacts.js"></script>
 </head>
@@ -23,7 +23,7 @@
     <input type="search"
       placeholder="Filter contacts..."
       ng-model="search"
-      ng-change="scrollTop()">
+      ng-change="scrollTop()"/>
     <button ng-if="search.length"
       class="button button-icon ion-android-close input-button"
       ng-click="clearSearch()">
@@ -38,7 +38,7 @@
         ng-href="https://www.google.com/#q={{item.first_name + '+' + item.last_name}}"
         ng-style="{'line-height': getItemHeight(item) + 'px'}"
         ng-class="{'item-divider': item.isLetter}">
-        <img ng-if="!item.isLetter" ng-src="http://placekitten.com/60/{{55 + ($index % 10)}}">
+        <img ng-if="!item.isLetter" ng-src="http://placekitten.com/60/{{55 + ($index % 10)}}"/>
         {{item.letter || (item.first_name+' '+item.last_name)}}
       </a>
     </div>
